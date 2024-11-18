@@ -1,0 +1,87 @@
+
+
+
+
+
+<div id="test-sec" class="flex flex-col justify-center items-center"
+    style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px">
+    <h1 class="text-[40px]"
+        style="color: {{ section.settings.text_color }};">{{ section.settings.headline }}</h1>
+    
+    <div class="text-red-300">{{ section.settings.subheadline }}</div>
+    {% for block in section.blocks %}
+        <div>
+            {{ block.settings.question }}
+            <div>
+                {{ block.settings.image }}
+            </div>
+        </div>
+        
+    {% endfor %}
+</div>
+
+
+
+
+{% schema %}
+{
+    "name": "FAQ",
+    "settings": [
+        {
+            "type": "text",
+            "id": "headline",
+            "label": "Headline"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text color",
+            "default": "#000"
+        },
+        {
+            "type": "richtext",
+            "id": "subheadline",
+            "label": "Subheadline"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "min": 0,
+            "max": 100,
+            "default": 20
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "min": 0,
+            "max": 100,
+            "default": 20
+        }
+    ],
+    "blocks": [
+        {
+            "name": "Block",
+            "type": "question",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "question",
+                    "label": "question"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name" : "FAQ"
+        }
+    ]
+}
+{% endschema %}
