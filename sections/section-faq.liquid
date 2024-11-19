@@ -1,25 +1,37 @@
 
+<div>
+    <div id="test-sec" class="flex flex-col items-{{ section.settings.alignment }}"
+        style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px">
+        <h1 class="text-[40px]"
+            style="color: {{ section.settings.text_color }};">{{ section.settings.headline }}</h1>
+    </div> 
 
-
-
-
-<div id="test-sec" class="flex flex-col justify-center items-center"
-    style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px">
-    <h1 class="text-[40px]"
-        style="color: {{ section.settings.text_color }};">{{ section.settings.headline }}</h1>
+    <div class="flex flex-col items-{{ section.settings.sub-alignment }}">
+        <div>{{ section.settings.subheadline }}</div>
+    </div>
     
-    <div class="text-red-300">{{ section.settings.subheadline }}</div>
-    {% for block in section.blocks %}
-        <div>
-            {{ block.settings.question }}
-            <div>
-                {{ block.settings.image }}
+    <div class="flex flex-row justify-center">
+        {% for block in section.blocks %}
+            <div class="
+            {% if block.settings.screens == 'md:hidden' %} hidden md:flex
+            {% elsif block.settings.screens == 'hidden' %} flex md:hidden
+            {% else %} flex 
+            {% endif %}" 
+            style="padding-top: {{ block.settings.padding_top }}px; padding-bottom: {{ block.settings.padding_bottom }}px">
+                <div class="w-full h-[400px] md:h-[500px] relative overflow-hidden">
+                    {% if block.settings.image != blank %}
+                        <img 
+                        src="{{ block.settings.image | image_url: width: '1000' }}" 
+                        alt=""
+                        class="w-full h-full object-cover"
+                        loading="lazy"
+                        >
+                    {% endif %}
+                </div>
             </div>
-        </div>
-        
-    {% endfor %}
+        {% endfor %}
+    </div>
 </div>
-
 
 
 
@@ -39,9 +51,49 @@
             "default": "#000"
         },
         {
+            "type": "select",
+            "id": "alignment",
+            "label": "Text align",
+            "default": "center",
+            "options": [
+                {
+                    "value": "start",
+                    "label": "left"
+                },
+                {
+                    "value": "center",
+                    "label": "center"
+                },
+                {
+                    "value": "end",
+                    "label": "right"
+                }
+            ]
+        },
+        {
             "type": "richtext",
             "id": "subheadline",
             "label": "Subheadline"
+        },
+        {
+            "type": "select",
+            "id": "sub-alignment",
+            "label": "Text align",
+            "default": "center",
+            "options": [
+                {
+                    "value": "start",
+                    "label": "left"
+                },
+                {
+                    "value": "center",
+                    "label": "center"
+                },
+                {
+                    "value": "end",
+                    "label": "right"
+                }
+            ]
         },
         {
             "type": "range",
@@ -66,9 +118,40 @@
             "type": "question",
             "settings": [
                 {
-                    "type": "text",
-                    "id": "question",
-                    "label": "question"
+                    "type": "select",
+                    "id": "screens",
+                    "label": "Enable / Disable",
+                    "default": "flex",
+                    "options": [
+                        {
+                            "value": "md:hidden",
+                            "label": "Desktop Only"
+                        },
+                        {
+                            "value": "hidden",
+                            "label": "Mobile Only"
+                        },
+                        {
+                            "value": "flex",
+                            "label": "All"
+                        }
+                    ]
+                },
+                {
+                    "type": "range",
+                    "id": "padding_top",
+                    "label": "Padding Top",
+                    "min": 0,
+                    "max": 100,
+                    "default": 20
+                },
+                {
+                    "type": "range",
+                    "id": "padding_bottom",
+                    "label": "Padding Bottom",
+                    "min": 0,
+                    "max": 100,
+                    "default": 20
                 },
                 {
                     "type": "image_picker",

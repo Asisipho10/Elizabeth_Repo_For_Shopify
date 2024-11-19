@@ -1,8 +1,9 @@
 {
     "sections": {
         "template": {
-            "type": "template-multi-column"
+            "type": "section-faq"
         }
     },
     "order": ["template"]
 }
+
