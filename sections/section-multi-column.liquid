@@ -4,7 +4,7 @@
     style="background-color: {{ section.settings.background_color }};">
     <div class="marquee-wrapper my-0 mx-auto"
         style="max-width: {{ section.settings.page_width }}px;">
-        <div class="flex flex-row items-center justify-around py-4 ">
+        <div class="md:flex md:flex-row md:items-center md:justify-around overflow-scroll whitespace-nowrap scroll py-4">
 
               {% for block in section.blocks %}
                 <div class="content-wrapper inline-flex items-center text-center px-4
