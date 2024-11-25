@@ -1,9 +1,15 @@
 {
     "sections": {
+        "section-image-text":{
+            "type": "section-image-text"
+        },
         "template": {
             "type": "section-faq"
         }
     },
-    "order": ["template"]
+    "order": [
+        "template",
+        "section-image-text"
+    ]
 }
 

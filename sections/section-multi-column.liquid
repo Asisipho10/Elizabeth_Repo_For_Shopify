@@ -1,11 +1,56 @@
+
+
+<div class="scrolling-text"
+    style="background-color: {{ section.settings.background_color }};">
+    <div class="marquee-wrapper my-0 mx-auto"
+        style="max-width: {{ section.settings.page_width }}px;">
+        <div class="flex flex-row items-center justify-around py-4 ">
+
+              {% for block in section.blocks %}
+                <div class="content-wrapper inline-flex items-center text-center px-4
+                {% if block.settings.text_transform == 'uppercase' %} uppercase 
+                {% elsif block.settings.text_transform == 'lowercase' %} lowercase
+                {% endif %}"
+                    style="color: {{ block.settings.text_color }}; font-size: {{ block.settings.text_size }}px;">
+                    <span style="height: inherit;">
+                        {% if block.settings.image != blank %}
+                            <img 
+                            src="{{ block.settings.image | image_url: width: '50' }}" 
+                            alt=""
+                            class="min-w-[40px] object-cover p-4"
+                            loading="lazy"
+                            >
+                        {% endif %}
+                    </span>
+                    {{ block.settings.text_content }} 
+                </div>
+              {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+
 {% schema %}
 {
     "name": "Multi-column",
     "settings": [
         {
-            "type": "text",
-            "id": "text",
-            "label": "text" 
+            "type": "color",
+            "id": "background_color",
+            "label": "Background color",
+            "default": "#fff"
+        },
+        {
+            "type": "richtext",
+            "id": "text_section",
+            "label": "Text"
+        },
+        {
+            "type": "number",
+            "id": "page_width",
+            "label": "Max width",
+            "default": 1000
         }
     ],
     "blocks": [
@@ -14,9 +59,42 @@
             "type": "text",
             "settings": [
                 {
-                    "type": "text",
-                    "id": "richtext",
-                    "label": "text"
+                    "type": "richtext",
+                    "id": "text_content",
+                    "label": "Text"
+                },
+                {
+                    "type": "number",
+                    "id": "text_size",
+                    "label": "Text size",
+                    "default": 40 
+                },
+                {
+                    "type": "color",
+                    "id": "text_color",
+                    "label": "Text color",
+                    "default": "#000"
+                },
+                {
+                    "type": "select",
+                    "id": "text_transform",
+                    "label": "Text transform",
+                    "default": "uppercase",
+                    "options": [
+                        {
+                            "value": "uppercase",
+                            "label": "uppercase"
+                        },
+                        {
+                            "value": "lowercase",
+                            "label": "lowercase"
+                        }
+                    ]
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
                 }
             ]
         }

@@ -1,7 +1,11 @@
 {
     "sections": {
         "template": {
-            "type": "section-multi-column"
+            "type": "section-multi-column",
+            "settings": {
+                "text": "Sample text",
+                "background-color": "#fff"
+            }
         }
     },
     "order": ["template"]
