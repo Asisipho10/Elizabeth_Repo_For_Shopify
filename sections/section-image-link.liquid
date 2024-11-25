@@ -1,0 +1,139 @@
+<div class="image-link-section" style="background-color: {{ section.settings.background_color }};">
+  <div class="flex flex-col justify-center items-center my-0 mx-auto px-[20px]"
+    style="max-width: {{ section.settings.page_width }}px;
+           padding-top: {{ section.settings.padding_top }}px; 
+           padding-bottom: {{ section.settings.padding_bottom }}px;"
+        >
+        {% if section.settings.header != blank %}
+            <div class="header flex flex-row text-[40px] font-semibold uppercase w-full"
+                style="justify-content: {{ section.settings.alignment }}; padding-bottom: {{ section.settings.padding_bottom }}px;">
+              <h1>{{ section.settings.header }}</h1>
+            </div>
+        {% endif %}
+
+    <div class="flex flex-col md:flex-row gap-[20px] justify-center items-center">
+      {% for block in section.blocks %}
+        <div class="w-full relative">
+          <a href="{{ block.settings.image_url }}">  
+            <img src="{{ block.settings.image |  image_url: width: '800' }}" alt="image">
+              <div class="absolute inset-0 flex justify-center items-end">
+                <a href="{{ block.settings.text_url }}" 
+                  class="w-full flex justify-center items-center text-[16px] font-semibold py-4"
+                  style="background-color: {{ block.settings.text_background_color }}; color: {{ block.settings.text_color }};">
+                  {{ block.settings.text }}
+                </a>
+              </div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+{
+    "name": "Image link",
+    "settings": [
+        {
+          "type": "number",
+          "id": "page_width",
+          "label": "Page width",
+          "default": 1200
+        },
+        {
+          "type": "color_background",
+          "id": "background_color",
+          "label": "Background color",
+          "default": "#f1f1f1"
+        },
+        {
+          "type": "text",
+          "id": "header",
+          "label": "Header"
+        },
+        {
+          "type": "select",
+          "id": "alignment",
+          "label": "Text alignment",
+          "options": [
+            {
+              "value": "start",
+              "label": "left"  
+            },
+            {
+              "value": "center",
+              "label": "center"  
+            },
+            {
+              "value": "end",
+              "label": "right"  
+            }
+          ]
+        },
+        {
+          "type": "range",
+          "id": "padding_top",
+          "label": "Padding Top",
+          "min": 0,
+          "max": 100,
+          "default": 20  
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom",
+          "label": "Padding Bottom",
+          "min": 0,
+          "max": 100,
+          "default": 20  
+        }
+    ],
+    "blocks": [
+        {
+          "name": "image_block",
+          "type": "image",
+          "limit": 3,
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "image",
+              "label": "Image"  
+            },
+            {
+              "type": "url",
+              "id": "image_url",
+              "label": "Image URL"  
+            },
+            {
+              "type": "richtext",
+              "id": "text",
+              "label": "Text"  
+            },
+            {
+              "type": "url",
+              "id": "text_url",
+              "label": "Text link"
+            },
+            {
+              "type": "color",
+              "id": "text_color",
+              "label": "Text color",
+              "default": "#fff"  
+            },
+            {
+              "type": "color_background",
+              "id": "text_background_color",
+              "label": "Text background",
+              "default": "#000"  
+            }
+          ]    
+        }
+    ],
+    "presets": [
+        {
+            "name": "Image link"
+        }
+    ]
+}
+{% endschema %}

@@ -1,84 +1,258 @@
+<div class="image-text-section" style="background-color: {{ section.settings.backround_color }}">
+  <div class="container my-0 mx-auto" 
+  style="max-width: {{ section.settings.page_width }}px; 
+         padding-top: {{ section.settings.padding_top }}px; 
+         padding-bottom: {{ section.settings.padding_bottom }}px;">
+ 
+  <div class="heading_text flex flex-col items-center">
+    <div class="main_header text-[40px] font-semibold uppercase ">
+      <h1>{{ section.settings.main_header }}</h1>
+    </div>
+    <div class="main_subheader">{{ section.settings.main_subheader }}</div>
+  </div>
 
-<div class="image-text-section">
-    <div class="container my-0 mx-auto"
-        style="max-width: {{ section.settings.page_width }}px;"
-    >
-        <div class="content-wrapper flex flex-col md:flex-row justify-center items-center">
-            <div class="image-container w-2/3 px-[10px] min-h-[300px] overflow-hidden">
-              {% if section.settings.image != blank %}
+    {% if section.blocks.size > 0 %}
+      <div class="content-wrapper flex flex-col md:flex-row justify-center md:items-center gap-10">
+        {% for block in section.blocks %}
+          {% case block.type %}
+          {% when 'Image_block' %}
+            <div class="image-container w-1/1 md:w-2/3 px-[10px] overflow-hidden"
+                style="height: {{ block.settings.max_height }}px;">
+              {% if block.settings.image %}
                 <img 
-                src="{{ section.settings.image | image_url: width: '800' }}" 
-                alt=""
-                class="min-w-[40px] object-cover p-4"
-                loading="lazy"
+                  src="{{ block.settings.image | image_url: width: '800' }}" 
+                  alt="Image for {{ section.settings.name }}" 
+                  class="object-center object-cover h-full w-full" 
+                  loading="lazy"
+                  style="border-radius: {{ block.settings.radius }}px;"
                 >
               {% endif %}
             </div>
-            <div class="text-container w-1/3 px-[10px]">
-              <div class="text-wrapper flex flex-col justify-center items-start">
-                <div class="header">
-                  <h1 class="text-[40px]">
-                    {{ section.settings.header }}
-                  </h1>
-                </div>
-                <div class="subheader wrap">
-                  {{ section.settings.subheader }}
-                </div>
-                <button class="mt-[20px]">
-                  <a class="px-8 py-4 bg-slate-600 text-white rounded-[4px]" 
-                    href="{{ section.settings.button_link }}">
-                    {{ section.settings.button_label }}
+
+          {% when 'Text_block' %}
+            <div class="text-container w-1/1 md:w-1/3 px-[10px]">
+              <div class="text-wrapper flex flex-col justify-center"
+                  style="align-items: {{ block.settings.alignment }};">
+                  {% if block.settings.header %}
+                    <h2 class="text-[32px] font-semibold uppercase">
+                      {{ block.settings.header }}
+                    </h2>
+                  {% endif %}
+                  {% if block.settings.subheader %}
+                    <div class="subheader wrap mt-[10px]">
+                      {{ block.settings.subheader }}
+                    </div>
+                  {% endif %}
+
+                {% if block.settings.button_label != blank %}
+                  <a href="{{ block.settings.button_link }}" class="button-container w-full flex flex-row" style="justify-content: {{ block.settings.justify }};">
+                    <button class="px-8 py-4 rounded-[4px] {% if block.settings.button_width == 'full' %}w-full{% else %}w-fit{% endif %} md:!w-fit" 
+                            style="margin-top: {{ block.settings.margin_top | default: 30 }}px; color: {{ block.settings.btn_text_color }}; background-color: {{ block.settings.btn_bg_color }};">
+                      {{ block.settings.button_label }}
+                    </button>
                   </a>
-                </button>
+                {% endif %}
               </div>
             </div>
-        </div>
-    </div>
+          {% else %}
+            <p>Unknown block type: {{ block.type }}</p>
+          {% endcase %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
 </div>
 
 
 
 {% schema %}
 {
-    "name": "image-text",
-    "settings": [
-      {
-        "type": "number",
-        "id": "page_width",
-        "label": "Page width",
-        "default": 1200
-      },
-      {
-        "type": "image_picker",
-        "id": "image",
-        "label": "Image"
-      },
-      {
-        "type": "text",
-        "id": "header",
-        "label": "Header"
-      },
-      {
-        "type": "richtext",
-        "id": "subheader",
-        "label": "Subheader"
-      },
-      {
-        "type": "text",
-        "id": "button_label",
-        "label": "Label",
-        "default": "Shop Collection"
-      },
-      {
-        "type": "url",
-        "id": "button_link",
-        "label": "Link"
-      }
-    ],
-    "presets": [
+  "name": "Image Text Section",
+  "settings": [
+    {
+      "type": "number",
+      "id": "page_width",
+      "label": "Page Width",
+      "default": 1200
+    },
+    {
+      "type": "color_background",
+      "id": "backround_color",
+      "label": "Section background",
+      "default": "#fff"
+    },
+    {
+      "type": "text",
+      "id": "main_header",
+      "label": "Main header"
+    },
+    {
+      "type": "richtext",
+      "id": "main_subheader",
+      "label": "Main subheader"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 100,
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 100,
+      "default": 20
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Image Block",
+      "type": "Image_block",
+      "settings": [
         {
-            "name": "Image-text"
+          "type": "number",
+          "id": "max_height",
+          "label": "Max height",
+          "default": 400
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "image_url",
+          "label": "Image URL"
+        },
+        {
+          "type": "range",
+          "id": "radius",
+          "label": "Image radius",
+          "min": 0,
+          "max": 20,
+          "default": 0
         }
-    ]
+      ]
+    },
+    {
+      "name": "Text Block",
+      "type": "Text_block",
+      "settings": [
+        {
+          "type": "select",
+          "id": "alignment",
+          "label": "Text Alignment",
+          "options": [
+            {
+              "value": "start",
+              "label": "left"
+            },
+            {
+              "value": "center",
+              "label": "center"
+            },
+            {
+              "value": "end",
+              "label": "right"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "header",
+          "label": "Header"
+        },
+        {
+          "type": "richtext",
+          "id": "subheader",
+          "label": "Subheader"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button Label"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        },
+        {
+          "type": "color_background",
+          "id": "btn_bg_color",
+          "label": "Button background color",
+          "default": "#000"
+        },
+        {
+          "type": "color",
+          "id": "btn_text_color",
+          "label": "Button text color",
+          "default": "#fff"
+        },
+        {
+          "type": "range",
+          "id": "margin_top",
+          "label": "Margin Top",
+          "min": 0,
+          "max": 100,
+          "default": 20
+        },
+        {
+          "type": "header",
+          "content": "BUTTON DESKTOP LAYOUT"
+        },
+        {
+          "type": "select",
+          "id": "justify",
+          "label": "Justify",
+          "options": [
+            {
+              "value": "start",
+              "label": "left"
+            },
+            {
+              "value": "center",
+              "label": "center"
+            },
+            {
+              "value": "end",
+              "label": "right"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "content": "MOBILE LAYOUT"
+        },
+        {
+          "type": "select",
+          "id": "button_width",
+          "label": "Button Width",
+          "options": [
+            {
+              "value": "full",
+              "label": "Full Width"
+            },
+            {
+              "value": "fit",
+              "label": "Fit Content"
+            }
+          ],
+          "default": "full"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image Text Section",
+      "category": "Custom Sections"
+    }
+  ]
 }
 {% endschema %}

@@ -1,15 +1,19 @@
 {
     "sections": {
+        "section-faq": {
+            "type": "section-faq"
+        },
         "section-image-text":{
             "type": "section-image-text"
         },
-        "template": {
-            "type": "section-faq"
+        "section-image-link": {
+            "type": "section-image-link"
         }
     },
     "order": [
-        "template",
-        "section-image-text"
+        "section-faq",
+        "section-image-text",
+        "section-image-link"
     ]
 }
 
