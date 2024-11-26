@@ -1,4 +1,6 @@
-<div class="image-link-section" style="background-color: {{ section.settings.background_color }};">
+<div class="image-link-section" 
+     style="background-color: {{ section.settings.background_color }};"
+  >
   <div class="flex flex-col justify-center items-center my-0 mx-auto px-[20px]"
     style="max-width: {{ section.settings.page_width }}px;
            padding-top: {{ section.settings.padding_top }}px; 
@@ -6,7 +8,8 @@
         >
         {% if section.settings.header != blank %}
             <div class="header flex flex-row text-[40px] font-semibold uppercase w-full"
-                style="justify-content: {{ section.settings.alignment }}; padding-bottom: {{ section.settings.padding_bottom }}px;">
+                style="justify-content: {{ section.settings.alignment }}; 
+                       padding-bottom: {{ section.settings.padding_bottom }}px;">
               <h1>{{ section.settings.header }}</h1>
             </div>
         {% endif %}
@@ -14,16 +17,19 @@
     <div class="flex flex-col md:flex-row gap-[20px] justify-center items-center">
       {% for block in section.blocks %}
         <div class="w-full relative">
-          <a href="{{ block.settings.image_url }}">  
-            <img src="{{ block.settings.image |  image_url: width: '800' }}" alt="image">
-              <div class="absolute inset-0 flex justify-center items-end">
-                <a href="{{ block.settings.text_url }}" 
-                  class="w-full flex justify-center items-center text-[16px] font-semibold py-4"
-                  style="background-color: {{ block.settings.text_background_color }}; color: {{ block.settings.text_color }};">
-                  {{ block.settings.text }}
-                </a>
-              </div>
-          </a>
+          {% if block.settings.image != blank %}
+            <a href="{{ block.settings.image_url }}">  
+              <img src="{{ block.settings.image |  image_url: width: '800' }}" alt="image" class="rounded-lg">
+                <div class="absolute inset-0 flex justify-center items-end p-[2px]">
+                  <a href="{{ block.settings.text_url }}" 
+                    class="w-full flex justify-center items-center text-[16px] font-semibold py-4 rounded-md"
+                    style="background-color: {{ block.settings.text_background_color }}; 
+                           color: {{ block.settings.text_color }};">
+                           {{ block.settings.text }}
+                  </a>
+                </div>
+            </a>
+          {% endif %}
         </div>
       {% endfor %}
     </div>
@@ -49,7 +55,7 @@
           "default": "#f1f1f1"
         },
         {
-          "type": "text",
+          "type": "richtext",
           "id": "header",
           "label": "Header"
         },
@@ -132,7 +138,8 @@
     ],
     "presets": [
         {
-            "name": "Image link"
+            "name": "Image link",
+            "category": "Custom Sections"
         }
     ]
 }

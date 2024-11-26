@@ -8,12 +8,16 @@
         },
         "section-image-link": {
             "type": "section-image-link"
+        },
+        "section-image-grid": {
+            "type": "section-image-grid"
         }
     },
     "order": [
         "section-faq",
         "section-image-text",
-        "section-image-link"
+        "section-image-link",
+        "section-image-grid"
     ]
 }
 
