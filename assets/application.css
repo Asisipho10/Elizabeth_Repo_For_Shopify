@@ -1291,26 +1291,6 @@ video {
   grid-auto-flow: column dense;
 }
 
-.auto-rows-\[minmax\(100px\2c _auto\)\] {
-  grid-auto-rows: minmax(100px, auto);
-}
-
-.grid-cols-6 {
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-}
-
-.grid-cols-5 {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-}
-
-.grid-rows-2 {
-  grid-template-rows: repeat(2, minmax(0, 1fr));
-}
-
-.grid-rows-5 {
-  grid-template-rows: repeat(5, minmax(0, 1fr));
-}
-
 .flex-row {
   flex-direction: row;
 }
@@ -1497,10 +1477,6 @@ video {
 
 .gap-10 {
   gap: 2.5rem;
-}
-
-.gap-4 {
-  gap: 1rem;
 }
 
 .gap-6 {

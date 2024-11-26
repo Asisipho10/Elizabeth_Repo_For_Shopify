@@ -1,4 +1,14 @@
 <style>
+  .span-cols-1 { grid-column: span 1; }
+  .span-cols-2 { grid-column: span 2; }
+  .span-cols-3 { grid-column: span 3; }
+  .span-cols-4 { grid-column: span 4; }
+
+  .relative img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
   .image-block-section {
     display: grid;
     grid-template-columns: repeat({{ section.settings.grid_columns }}, minmax(0, auto));
@@ -21,17 +31,17 @@
        style="max-width: {{ section.settings.page_width }}px;
               padding-top: {{ section.settings.padding_top }}px;
               padding-bottom: {{ section.settings.padding_bottom }}px;">
-    <div class="image-block-section">
-      {% for block in section.blocks %}
-        <div class="relative">
-          <a href="{{ block.settings.image_url }}">
-          <img 
-           src="{{ block.settings.image | image_url: width: '1000' }}" 
-           alt="image"
-          >
-          </a>
-        </div>
-      {% endfor %}  
+      <div class="image-block-section">
+        {% for block in section.blocks %}
+          <div class="relative span-cols-{{ block.settings.column_span }}">
+            <a href="{{ block.settings.image_url }}">
+              <img 
+                src="{{ block.settings.image | image_url: width: '1000' }}" 
+                alt="image"
+              >
+            </a>
+          </div>              
+        {% endfor %}
     </div>
   </div>  
 </div>
@@ -63,6 +73,16 @@
       "min": 0,
       "max": 100,
       "default": 20  
+    },
+    {
+      "type": "number",
+      "id": "grid_columns",
+      "label": "Grid Columns"  
+    },
+    {
+      "type": "number",
+      "id": "mb_grid_columns",
+      "label": "Mobile Grid Columns"  
     }
   ],
   "blocks": [
@@ -79,6 +99,14 @@
           "type": "url",
           "id": "image_url",
           "label": "Image link"
+        },
+        {
+          "type": "range",
+          "id": "column_span",
+          "label": "Column Span",
+          "default": 1,
+          "min": 1,
+          "max": 4
         }
       ]
     }  
