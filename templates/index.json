@@ -38,7 +38,7 @@
           "settings": {
             "image": "shopify://shop_images/pexels-elena-blessing-355784-2674050.jpg",
             "image_url": "",
-            "text": "",
+            "text": "<p>Nature</p>",
             "text_url": "",
             "text_color": "#fff",
             "text_background_color": "#000"
@@ -49,7 +49,7 @@
           "settings": {
             "image": "shopify://shop_images/pexels-magda-ehlers-pexels-3886415.jpg",
             "image_url": "",
-            "text": "",
+            "text": "<p>City</p>",
             "text_url": "",
             "text_color": "#fff",
             "text_background_color": "#000"
@@ -60,7 +60,7 @@
           "settings": {
             "image": "shopify://shop_images/pexels-huuhuynh-20210326.jpg",
             "image_url": "",
-            "text": "",
+            "text": "<p>Township</p>",
             "text_url": "",
             "text_color": "#fff",
             "text_background_color": "#000"
