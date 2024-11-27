@@ -41,10 +41,22 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
+    },
+    "section_image_link_3hTLBg": {
+      "type": "section-image-link",
+      "settings": {
+        "page_width": 1200,
+        "background_color": "#fff",
+        "header": "",
+        "alignment": "start",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
     }
   },
   "order": [
     "section_banner_BANDqX",
-    "section-faq"
+    "section-faq",
+    "section_image_link_3hTLBg"
   ]
 }
