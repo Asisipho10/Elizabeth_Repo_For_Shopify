@@ -30,6 +30,57 @@
         "justification": "justify-end justify-end"
       }
     },
+    "section_image_link_3hTLBg": {
+      "type": "section-image-link",
+      "blocks": {
+        "image_nWHjhB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/pexels-elena-blessing-355784-2674050.jpg",
+            "image_url": "",
+            "text": "",
+            "text_url": "",
+            "text_color": "#fff",
+            "text_background_color": "#000"
+          }
+        },
+        "image_wRHU9a": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/pexels-magda-ehlers-pexels-3886415.jpg",
+            "image_url": "",
+            "text": "",
+            "text_url": "",
+            "text_color": "#fff",
+            "text_background_color": "#000"
+          }
+        },
+        "image_dWxkzG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/pexels-huuhuynh-20210326.jpg",
+            "image_url": "",
+            "text": "",
+            "text_url": "",
+            "text_color": "#fff",
+            "text_background_color": "#000"
+          }
+        }
+      },
+      "block_order": [
+        "image_nWHjhB",
+        "image_wRHU9a",
+        "image_dWxkzG"
+      ],
+      "settings": {
+        "page_width": 1400,
+        "background_color": "#fff",
+        "header": "",
+        "alignment": "start",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
     "section-faq": {
       "type": "section-faq",
       "settings": {
@@ -41,22 +92,11 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
-    },
-    "section_image_link_3hTLBg": {
-      "type": "section-image-link",
-      "settings": {
-        "page_width": 1200,
-        "background_color": "#fff",
-        "header": "",
-        "alignment": "start",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
     }
   },
   "order": [
     "section_banner_BANDqX",
-    "section-faq",
-    "section_image_link_3hTLBg"
+    "section_image_link_3hTLBg",
+    "section-faq"
   ]
 }
