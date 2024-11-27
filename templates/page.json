@@ -11,13 +11,17 @@
         },
         "section-image-grid": {
             "type": "section-image-grid"
+        },
+        "section-richtext": {
+            "type": "section-richtext"
         }
     },
     "order": [
         "section-faq",
         "section-image-text",
         "section-image-link",
-        "section-image-grid"
+        "section-image-grid",
+        "section-richtext"
     ]
 }
 
