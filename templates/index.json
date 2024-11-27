@@ -1,9 +1,50 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-            "section-faq": {
-                "type": "section-faq"
-            }
+  "sections": {
+    "section_banner_BANDqX": {
+      "type": "section-banner",
+      "blocks": {
+        "text_nWtbqE": {
+          "type": "text",
+          "settings": {
+            "header": "Mzansi for sho",
+            "subheader": "<p>Explore the beauty of the RSA nation.</p>",
+            "text_color": "#000"
+          }
+        }
+      },
+      "block_order": [
+        "text_nWtbqE"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/pexels-jvdm-1543411.jpg",
+        "alignment": "items-start text-start",
+        "justification": "justify-end justify-end"
+      }
     },
-    "order": ["section-faq"]
+    "section-faq": {
+      "type": "section-faq",
+      "settings": {
+        "headline": "",
+        "text_color": "#000",
+        "alignment": "center",
+        "subheadline": "",
+        "sub-alignment": "center",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": [
+    "section_banner_BANDqX",
+    "section-faq"
+  ]
 }
-
