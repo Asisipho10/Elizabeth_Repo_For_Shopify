@@ -1,0 +1,183 @@
+<style>
+  .header-content-{{ section.id }} {
+    font-size: {{ section.settings.dt_text_size }}px;
+  }
+
+  @media screen and (max-width: 767px) {
+    .header-content-{{ section.id }} {
+      font-size: {{ section.settings.mb_text_size }}px;
+    }
+  }
+</style>
+
+
+
+<div class="richtext-section flex flex-col justify-center items-center">
+  <div class="richtext-container flex flex-col justify-center items-center" 
+       style="max-width: {{ section.settings.page_width }}px;"
+    >
+    <div class="header my-0 mx-auto">
+      <h1 class="header-content-{{ section.id }}">
+        {{ section.settings.header }}
+      </h1>
+      <div class="subheader-content text-center" style="font-size: {{ section.settings.subheader_text_size }};">
+        {{ section.settings.subheader }}
+      </div>
+    </div>
+
+    <div class="content-block pt-[10px] text-center">
+      {% for block in section.blocks %}
+        <div class="text-content" style="font-size: {{ block.settings.text_size }}; color: {{ block.settings.text_color }};">
+          {{ block.settings.text }}
+        </div>
+
+        <div class="button-container flex flex-row justify-center items-center gap-[20px] pt-[10px]">
+          {% if block.settings.button_1 != blank %}
+            <div class="first-button flex flex-col justify-center items-center ">
+              <a class="py-[10px] px-[20px] min-w-[200px] rounded-md" 
+                 href="{{ block.settings.button_url }}"
+                 style="background-color: {{ block.settings.btn_bg_color }}; color: {{ block.settings.btn_text_color }}">
+                {{ block.settings.button_1 }}
+              </a>  
+            </div>
+          {% endif %}
+
+          {% if block.settings.button_2 != blank %}
+            <div class="second-button flex flex-col justify-center items-center ">
+              <a class="py-[10px] px-[20px] min-w-[200px] rounded-md" 
+                 href="{{ block.settings.button_2_url }}"
+                 style="background-color: {{ block.settings.btn_2_bg_color }}; color: {{ block.settings.btn_2_text_color }}">
+                {{ block.settings.button_2 }}
+              </a>  
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}  
+    </div>
+  </div>  
+</div>
+
+
+
+{% schema %}
+{
+    "name": "Richtext",
+    "settings": [
+      {
+        "type": "number",
+        "id": "page_width",
+        "label": "Page Width",
+        "default": 1200
+      },
+      {
+        "type": "text",
+        "id": "header",
+        "label": "Header"
+      },
+      {
+        "type": "number",
+        "id": "dt_text_size",
+        "label": "Desktop Text Size",
+        "default": 40
+      },
+      {
+        "type": "number",
+        "id": "mb_text_size",
+        "label": "Mobile Text Size",
+        "default": 20
+      },
+      {
+        "type": "richtext",
+        "id": "subheader",
+        "label": "Subheader"
+      },
+      {
+        "type": "number",
+        "id": "subheader_text_size",
+        "label": "Text size",
+        "default": 20
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Text_block",
+        "type": "text_block",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+          },
+          {
+            "type": "number",
+            "id": "text_size",
+            "label": "Text size",
+            "default": 16
+          },
+          {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color",
+            "default": "#000"
+          }
+        ]
+      },
+      {
+        "name": "Button",
+        "type": "Button",
+        "limit": 2,
+        "settings": [
+          {
+            "type": "text",
+            "id": "button_1",
+            "label": "Button"
+          },
+          {
+            "type": "color",
+            "id": "btn_text_color",
+            "label": "Button Text",
+            "default": "#fff"
+          },
+          {
+            "type": "url",
+            "id": "button_url",
+            "label": "Link"
+          },
+          {
+            "type": "color_background",
+            "id": "btn_bg_color",
+            "label": "Button bg color",
+            "default": "#000"
+          },
+          {
+            "type": "text",
+            "id": "button_2",
+            "label": "Button 2"
+          },
+          {
+            "type": "color",
+            "id": "btn_2_text_color",
+            "label": "Button 2 Text",
+            "default": "#fff"
+          },
+          {
+            "type": "url",
+            "id": "button_2_url",
+            "label": "Link 2"
+          },
+          {
+            "type": "color_background",
+            "id": "btn_2_bg_color",
+            "label": "Button 2 bg color",
+            "default": "#f1f"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Richtext"
+      }  
+    ]
+}
+{% endschema %}
