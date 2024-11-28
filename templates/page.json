@@ -1,27 +1,40 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "section-faq": {
-            "type": "section-faq"
-        },
-        "section-image-text":{
-            "type": "section-image-text"
-        },
-        "section-image-link": {
-            "type": "section-image-link"
-        },
-        "section-image-grid": {
-            "type": "section-image-grid"
-        },
-        "section-richtext": {
-            "type": "section-richtext"
-        }
+  "sections": {
+    "section-faq": {
+      "type": "section-faq",
+      "settings": {}
     },
-    "order": [
-        "section-faq",
-        "section-image-text",
-        "section-image-link",
-        "section-image-grid",
-        "section-richtext"
-    ]
+    "section-image-text": {
+      "type": "section-image-text",
+      "settings": {}
+    },
+    "section-image-link": {
+      "type": "section-image-link",
+      "settings": {}
+    },
+    "section-image-grid": {
+      "type": "section-image-grid",
+      "settings": {}
+    },
+    "section-richtext": {
+      "type": "section-richtext",
+      "settings": {}
+    }
+  },
+  "order": [
+    "section-faq",
+    "section-image-text",
+    "section-image-link",
+    "section-image-grid",
+    "section-richtext"
+  ]
 }
-

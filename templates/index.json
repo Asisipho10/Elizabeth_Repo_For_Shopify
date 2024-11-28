@@ -38,7 +38,7 @@
           "settings": {
             "text_content": "<p><em><strong>Cape Town</strong></em></p>",
             "text_size": 20,
-            "text_color": "#000",
+            "text_color": "#000000",
             "text_transform": "uppercase"
           }
         },
@@ -47,7 +47,7 @@
           "settings": {
             "text_content": "<p><em><strong>Jozi</strong></em></p>",
             "text_size": 20,
-            "text_color": "#000",
+            "text_color": "#000000",
             "text_transform": "uppercase"
           }
         },
@@ -56,7 +56,7 @@
           "settings": {
             "text_content": "<p><em><strong>Durban</strong></em></p>",
             "text_size": 20,
-            "text_color": "#000",
+            "text_color": "#000000",
             "text_transform": "uppercase"
           }
         }
@@ -67,7 +67,7 @@
         "text_8bLGfh"
       ],
       "settings": {
-        "background_color": "#fff",
+        "background_color": "#ffffff",
         "text_section": "",
         "page_width": 1000
       }
@@ -93,7 +93,7 @@
             "button_label": "Click Me!",
             "button_link": "",
             "btn_bg_color": "#000",
-            "btn_text_color": "#fff",
+            "btn_text_color": "#ffffff",
             "margin_top": 20,
             "justify": "start",
             "button_width": "full"
@@ -229,13 +229,22 @@
         "padding_top": 40,
         "padding_bottom": 20
       }
+    },
+    "section_image_grid_UTa6Df": {
+      "type": "section-image-grid",
+      "settings": {
+        "page_width": 1200,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
     }
   },
   "order": [
     "section_banner_BANDqX",
     "section_multi_column_jdHaAQ",
     "section_image_text_3wrny8",
+    "section_image_link_3hTLBg",
     "section-faq",
-    "section_image_link_3hTLBg"
+    "section_image_grid_UTa6Df"
   ]
 }
