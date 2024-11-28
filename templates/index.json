@@ -238,7 +238,7 @@
           "settings": {
             "image": "shopify://shop_images/pexels-allen-snapper-49566107-28003707.jpg",
             "image_url": "",
-            "column_span": 1
+            "column_span": 2
           }
         },
         "image_block_kPeEmA": {
@@ -264,10 +264,11 @@
         "image_block_nF6thK"
       ],
       "settings": {
-        "page_width": 1200,
+        "page_width": 1400,
         "padding_top": 20,
         "padding_bottom": 20,
-        "grid_columns": 3
+        "grid_columns": 3,
+        "mb_grid_columns": 2
       }
     }
   },
