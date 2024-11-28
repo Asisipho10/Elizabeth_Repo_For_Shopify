@@ -30,55 +30,46 @@
         "justification": "justify-end justify-end"
       }
     },
-    "section_image_link_3hTLBg": {
-      "type": "section-image-link",
+    "section_multi_column_jdHaAQ": {
+      "type": "section-multi-column",
       "blocks": {
-        "image_nWHjhB": {
-          "type": "image",
+        "text_A6Tjwx": {
+          "type": "text",
           "settings": {
-            "image": "shopify://shop_images/pexels-elena-blessing-355784-2674050.jpg",
-            "image_url": "",
-            "text": "<p>Nature</p>",
-            "text_url": "",
-            "text_color": "#ffffff",
-            "text_background_color": "#000"
+            "text_content": "<p><em><strong>Cape Town</strong></em></p>",
+            "text_size": 20,
+            "text_color": "#000",
+            "text_transform": "uppercase"
           }
         },
-        "image_wRHU9a": {
-          "type": "image",
+        "text_zAeezN": {
+          "type": "text",
           "settings": {
-            "image": "shopify://shop_images/pexels-magda-ehlers-pexels-3886415.jpg",
-            "image_url": "",
-            "text": "<p>City</p>",
-            "text_url": "",
-            "text_color": "#ffffff",
-            "text_background_color": "#000"
+            "text_content": "<p><em><strong>Jozi</strong></em></p>",
+            "text_size": 20,
+            "text_color": "#000",
+            "text_transform": "uppercase"
           }
         },
-        "image_dWxkzG": {
-          "type": "image",
+        "text_8bLGfh": {
+          "type": "text",
           "settings": {
-            "image": "shopify://shop_images/pexels-huuhuynh-20210326.jpg",
-            "image_url": "",
-            "text": "<p>Township</p>",
-            "text_url": "",
-            "text_color": "#ffffff",
-            "text_background_color": "#000"
+            "text_content": "<p><em><strong>Durban</strong></em></p>",
+            "text_size": 20,
+            "text_color": "#000",
+            "text_transform": "uppercase"
           }
         }
       },
       "block_order": [
-        "image_nWHjhB",
-        "image_wRHU9a",
-        "image_dWxkzG"
+        "text_A6Tjwx",
+        "text_zAeezN",
+        "text_8bLGfh"
       ],
       "settings": {
-        "page_width": 1400,
         "background_color": "#fff",
-        "header": "",
-        "alignment": "start",
-        "padding_top": 40,
-        "padding_bottom": 20
+        "text_section": "",
+        "page_width": 1000
       }
     },
     "section_image_text_3wrny8": {
@@ -187,12 +178,64 @@
         "padding_top": 0,
         "padding_bottom": 20
       }
+    },
+    "section_image_link_3hTLBg": {
+      "type": "section-image-link",
+      "blocks": {
+        "image_nWHjhB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/pexels-elena-blessing-355784-2674050.jpg",
+            "image_url": "",
+            "text": "<p>Nature</p>",
+            "text_url": "",
+            "text_color": "#ffffff",
+            "text_background_color": "#000"
+          }
+        },
+        "image_wRHU9a": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/pexels-magda-ehlers-pexels-3886415.jpg",
+            "image_url": "",
+            "text": "<p>City</p>",
+            "text_url": "",
+            "text_color": "#ffffff",
+            "text_background_color": "#000"
+          }
+        },
+        "image_dWxkzG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/pexels-huuhuynh-20210326.jpg",
+            "image_url": "",
+            "text": "<p>Township</p>",
+            "text_url": "",
+            "text_color": "#ffffff",
+            "text_background_color": "#000"
+          }
+        }
+      },
+      "block_order": [
+        "image_nWHjhB",
+        "image_wRHU9a",
+        "image_dWxkzG"
+      ],
+      "settings": {
+        "page_width": 1400,
+        "background_color": "#fff",
+        "header": "",
+        "alignment": "start",
+        "padding_top": 40,
+        "padding_bottom": 20
+      }
     }
   },
   "order": [
     "section_banner_BANDqX",
-    "section_image_link_3hTLBg",
+    "section_multi_column_jdHaAQ",
     "section_image_text_3wrny8",
-    "section-faq"
+    "section-faq",
+    "section_image_link_3hTLBg"
   ]
 }
