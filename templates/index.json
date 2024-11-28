@@ -113,6 +113,57 @@
         "padding_bottom": 20
       }
     },
+    "section_image_link_3hTLBg": {
+      "type": "section-image-link",
+      "blocks": {
+        "image_nWHjhB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/pexels-elena-blessing-355784-2674050.jpg",
+            "image_url": "",
+            "text": "<p>Nature</p>",
+            "text_url": "",
+            "text_color": "#ffffff",
+            "text_background_color": "#000"
+          }
+        },
+        "image_wRHU9a": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/pexels-magda-ehlers-pexels-3886415.jpg",
+            "image_url": "",
+            "text": "<p>City</p>",
+            "text_url": "",
+            "text_color": "#ffffff",
+            "text_background_color": "#000"
+          }
+        },
+        "image_dWxkzG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/pexels-huuhuynh-20210326.jpg",
+            "image_url": "",
+            "text": "<p>Township</p>",
+            "text_url": "",
+            "text_color": "#ffffff",
+            "text_background_color": "#000"
+          }
+        }
+      },
+      "block_order": [
+        "image_nWHjhB",
+        "image_wRHU9a",
+        "image_dWxkzG"
+      ],
+      "settings": {
+        "page_width": 1400,
+        "background_color": "#fff",
+        "header": "",
+        "alignment": "start",
+        "padding_top": 40,
+        "padding_bottom": 20
+      }
+    },
     "section-faq": {
       "type": "section-faq",
       "blocks": {
@@ -179,59 +230,39 @@
         "padding_bottom": 20
       }
     },
-    "section_image_link_3hTLBg": {
-      "type": "section-image-link",
+    "section_image_grid_UTa6Df": {
+      "type": "section-image-grid",
       "blocks": {
-        "image_nWHjhB": {
-          "type": "image",
+        "image_block_tLD6P4": {
+          "type": "Image_block",
           "settings": {
-            "image": "shopify://shop_images/pexels-elena-blessing-355784-2674050.jpg",
+            "image": "shopify://shop_images/pexels-allen-snapper-49566107-28003707.jpg",
             "image_url": "",
-            "text": "<p>Nature</p>",
-            "text_url": "",
-            "text_color": "#ffffff",
-            "text_background_color": "#000"
+            "column_span": 1
           }
         },
-        "image_wRHU9a": {
-          "type": "image",
+        "image_block_kPeEmA": {
+          "type": "Image_block",
           "settings": {
-            "image": "shopify://shop_images/pexels-magda-ehlers-pexels-3886415.jpg",
+            "image": "shopify://shop_images/pexels-mosei-films-52730546-9308097.jpg",
             "image_url": "",
-            "text": "<p>City</p>",
-            "text_url": "",
-            "text_color": "#ffffff",
-            "text_background_color": "#000"
+            "column_span": 1
           }
         },
-        "image_dWxkzG": {
-          "type": "image",
+        "image_block_nF6thK": {
+          "type": "Image_block",
           "settings": {
-            "image": "shopify://shop_images/pexels-huuhuynh-20210326.jpg",
+            "image": "shopify://shop_images/pexels-droneafrica-12987633.jpg",
             "image_url": "",
-            "text": "<p>Township</p>",
-            "text_url": "",
-            "text_color": "#ffffff",
-            "text_background_color": "#000"
+            "column_span": 1
           }
         }
       },
       "block_order": [
-        "image_nWHjhB",
-        "image_wRHU9a",
-        "image_dWxkzG"
+        "image_block_tLD6P4",
+        "image_block_kPeEmA",
+        "image_block_nF6thK"
       ],
-      "settings": {
-        "page_width": 1400,
-        "background_color": "#fff",
-        "header": "",
-        "alignment": "start",
-        "padding_top": 40,
-        "padding_bottom": 20
-      }
-    },
-    "section_image_grid_UTa6Df": {
-      "type": "section-image-grid",
       "settings": {
         "page_width": 1200,
         "padding_top": 20,
