@@ -124,13 +124,67 @@
     },
     "section-faq": {
       "type": "section-faq",
+      "blocks": {
+        "question_jCkGkq": {
+          "type": "question",
+          "settings": {
+            "screens": "flex",
+            "padding_top": 20,
+            "padding_bottom": 20,
+            "image": "shopify://shop_images/pexels-arthurbrognoli-2406776.jpg"
+          }
+        },
+        "question_zrxWgN": {
+          "type": "question",
+          "settings": {
+            "screens": "flex",
+            "padding_top": 20,
+            "padding_bottom": 20,
+            "image": "shopify://shop_images/pexels-bandoftravellers-6843125.jpg"
+          }
+        },
+        "question_d4EWEw": {
+          "type": "question",
+          "settings": {
+            "screens": "flex",
+            "padding_top": 20,
+            "padding_bottom": 20,
+            "image": "shopify://shop_images/pexels-taryn-elliott-3889929.jpg"
+          }
+        },
+        "question_GYCDCe": {
+          "type": "question",
+          "settings": {
+            "screens": "flex",
+            "padding_top": 20,
+            "padding_bottom": 20,
+            "image": "shopify://shop_images/pexels-taryn-elliott-9613718.jpg"
+          }
+        },
+        "question_fCdtGr": {
+          "type": "question",
+          "settings": {
+            "screens": "flex",
+            "padding_top": 20,
+            "padding_bottom": 20,
+            "image": "shopify://shop_images/pexels-pixabay-259547.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "question_jCkGkq",
+        "question_zrxWgN",
+        "question_d4EWEw",
+        "question_GYCDCe",
+        "question_fCdtGr"
+      ],
       "settings": {
         "headline": "",
         "text_color": "#000000",
         "alignment": "center",
         "subheadline": "",
         "sub-alignment": "center",
-        "padding_top": 20,
+        "padding_top": 0,
         "padding_bottom": 20
       }
     }
