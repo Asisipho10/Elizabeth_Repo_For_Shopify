@@ -249,10 +249,26 @@
             "column_span": 1
           }
         },
+        "image_block_6j9awh": {
+          "type": "Image_block",
+          "settings": {
+            "image": "shopify://shop_images/pexels-magda-ehlers-pexels-3814243.jpg",
+            "image_url": "",
+            "column_span": 1
+          }
+        },
         "image_block_nF6thK": {
           "type": "Image_block",
           "settings": {
             "image": "shopify://shop_images/pexels-droneafrica-12987633.jpg",
+            "image_url": "",
+            "column_span": 1
+          }
+        },
+        "image_block_4bGMnw": {
+          "type": "Image_block",
+          "settings": {
+            "image": "shopify://shop_images/pexels-arthurbrognoli-2342550.jpg",
             "image_url": "",
             "column_span": 1
           }
@@ -261,7 +277,9 @@
       "block_order": [
         "image_block_tLD6P4",
         "image_block_kPeEmA",
-        "image_block_nF6thK"
+        "image_block_6j9awh",
+        "image_block_nF6thK",
+        "image_block_4bGMnw"
       ],
       "settings": {
         "page_width": 1400,
