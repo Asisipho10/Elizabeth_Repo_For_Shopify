@@ -17,7 +17,7 @@
           "settings": {
             "header": "Mzansi for sho",
             "subheader": "<p>Explore the beauty of the RSA nation.</p>",
-            "text_color": "#000"
+            "text_color": "#000000"
           }
         }
       },
@@ -40,7 +40,7 @@
             "image_url": "",
             "text": "<p>Nature</p>",
             "text_url": "",
-            "text_color": "#fff",
+            "text_color": "#ffffff",
             "text_background_color": "#000"
           }
         },
@@ -51,7 +51,7 @@
             "image_url": "",
             "text": "<p>City</p>",
             "text_url": "",
-            "text_color": "#fff",
+            "text_color": "#ffffff",
             "text_background_color": "#000"
           }
         },
@@ -62,7 +62,7 @@
             "image_url": "",
             "text": "<p>Township</p>",
             "text_url": "",
-            "text_color": "#fff",
+            "text_color": "#ffffff",
             "text_background_color": "#000"
           }
         }
@@ -85,10 +85,51 @@
       "type": "section-faq",
       "settings": {
         "headline": "",
-        "text_color": "#000",
+        "text_color": "#000000",
         "alignment": "center",
         "subheadline": "",
         "sub-alignment": "center",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "section_image_text_3wrny8": {
+      "type": "section-image-text",
+      "blocks": {
+        "image_block_rCKexG": {
+          "type": "Image_block",
+          "settings": {
+            "max_height": 400,
+            "image": "shopify://shop_images/pexels-pixabay-259447.jpg",
+            "image_url": "",
+            "radius": 0
+          }
+        },
+        "text_block_tRdaFR": {
+          "type": "Text_block",
+          "settings": {
+            "alignment": "start",
+            "header": "Ezola mtshanam",
+            "subheader": "<p>tehdsydb yasdzbxasb hsaz`bx hasuz`x <br/><br/>ywasybxwyeasz`cbdsxhzb hsahz`x. awsb`zxb aywsb`zx absybz` xas ysa z`yasz xesabcgfdbsdz csdycsybudnzc ywsdcznsd ds<br/><br/>usasuzds cdzhxcunsdzx? esbdc bsdu buewbsd xwsduxc susudx huwesduxzdn hu wesh.</p>",
+            "button_label": "Click Me!",
+            "button_link": "",
+            "btn_bg_color": "#000",
+            "btn_text_color": "#fff",
+            "margin_top": 20,
+            "justify": "start",
+            "button_width": "full"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_rCKexG",
+        "text_block_tRdaFR"
+      ],
+      "settings": {
+        "page_width": 1370,
+        "backround_color": "#fff",
+        "main_header": "",
+        "main_subheader": "",
         "padding_top": 20,
         "padding_bottom": 20
       }
@@ -97,6 +138,7 @@
   "order": [
     "section_banner_BANDqX",
     "section_image_link_3hTLBg",
-    "section-faq"
+    "section-faq",
+    "section_image_text_3wrny8"
   ]
 }
