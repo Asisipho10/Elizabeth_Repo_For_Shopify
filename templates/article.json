@@ -1,7 +1,31 @@
 {
   "sections": {
     "article": {
-      "type": "section-article"  
+      "type": "section-article",
+      "blocks": {
+        "article_title": {
+          "type": "article_title"
+        },
+        "article_author": {
+          "type": "article_author"
+        }, 
+        "artible_published_date": {
+          "type": "artible_published_date"
+        },
+        "featured_image": {
+          "type": "featured_image"
+        },
+        "article_content": {
+          "type": "article_content"
+        }
+      },
+      "block_order": [
+        "article_title", 
+        "article_author", 
+        "artible_published_date", 
+        "featured_image", 
+        "article_content"
+      ]
     }
   },
   "order": [
