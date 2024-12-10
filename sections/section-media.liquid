@@ -1,0 +1,168 @@
+<style>
+  summary::marker {
+    content: none;
+  }
+</style>
+
+
+
+<section class="media-section flex flex-col justify-center items-center">
+  <div class="container max-w-[1200px] flex flex-col justify-center">
+    <div class="header flex mx-auto my-10">
+      <h1>{{ section.settings.cta_link_title }}</h1>
+    </div>     
+    <div class="faq__wrapper section--padded flex flex-row justify-center items-center">
+      <div class="image-block">
+        <a href="{{ section.settings.image_url }}">
+          <img 
+            class="faq-image w-full x-h-auto md:hidden"
+            src="{{ section.settings.dt_image | image }}" 
+            alt=""
+          >
+
+          <img
+            class="banner-image x-w-full x-h-auto x-hidden md:x-block"
+            src="{{ section.settings.dt_image | image_url: width: '1200' }}" 
+            srcset="{{ section.settings.dt_image | image_url: width: '1200' }} 768w"
+            sizes="(max-width: 767px) 100vw, 100vw"
+            alt="" 
+          />  
+        </a>
+      </div>
+      <div class="faq__accordion w-full max-w-[900px]">
+        {%- for block in section.blocks -%}
+          {%- if previous_block.type != 'article' -%}
+            <accordion-group>
+          {%- endif -%}
+
+          <details id="faq-{{ section.id }}-{{ forloop.index }}" {{ block.shopify_attributes }}>
+            <summary class="flex flex-row justify-between ">
+              <span class="u-large 
+              text-black font-chivo text-[16px] font-bold leading-[1.4] uppercase">{{ block.settings.title | escape }}</span>
+              {% render 'icon-plus' %}
+            </summary>
+
+            <details-content>
+              {% unless block.settings.text == blank %}
+                <div class="faq__accordion__item-wrap rte text-[14px] text-black font-chivo font-light leading-[1.4]">
+                  {{ block.settings.text }}
+                </div>
+              {% endunless %}
+              {% unless block.settings.liquid-text == blank %}
+                <div class="faq__accordion__item-wrap rte text-[14px] text-black font-chivo font-light leading-[1.4]">
+                  {{ block.settings.liquid-text }}
+                </div>
+              {% endunless %}
+            </details-content>
+          </details>
+
+          {%- if next_block.type != 'article' -%}
+            </accordion-group>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "FAQs",
+  "class": "js-section__faq-page",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_sidebar",
+      "label": "Enable category sidebar",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Call to action"
+    },
+    {
+      "type": "text",
+      "id": "cta_link_title",
+      "label": "Link label",
+      "default": "Contact us"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "Link"
+    },
+    {
+      "type": "select",
+      "id": "cta_style",
+      "label": "Style",
+      "options": [
+        {
+          "value": "link",
+          "label": "Link"
+        },
+        {
+          "value": "button",
+          "label": "Button"
+        }
+      ],
+      "default": "link"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "unit": "px",
+      "min": 0,
+      "max": 120,
+      "step": 3,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "unit": "px",
+      "min": 0,
+      "max": 120,
+      "step": 3,
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "article",
+      "name": "Article",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Article heading"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Use these articles to answer questions that customers have about your products and services. You can use text, links and images and also group articles into categories.</p>"
+        },
+        {
+          "type": "liquid",
+          "id": "liquid-text",
+          "label": "liquid-text",
+          "default": "<p>Use these articles to answer questions that customers have about your products and services. You can use text, links and images and also group articles into categories.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQs",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

@@ -25,16 +25,17 @@
         <h1 class="text-lg mb-4 font-medium uppercase">See what people are saying</h1>
 
         {% paginate article.comments by 5 %}
-          {% for comment in article.comments %}
+          {% for comment in paginate.items %}
             <div class="flex-1 border my-4 px-4 py-2 sm:px-6 sm:py-4 leading-relaxed">
-              <span class="comment-authore font-medium">{{ comment.author }}</span> <span class="text-xs text-gray-400">{{ comment.created_at | date: format: 'default' }}</span>
+              <span class="comment-authore font-medium">{{ comment.author }}</span> 
+              <span class="text-xs text-gray-400">{{ comment.created_at | date: format: 'default' }}</span>
               <p class="text-sm font-bold">{{ comment.content }}</p>
             </div>
           {% endfor %}
 
-          {% if paginate.page > 1 %}
-            {{ paginate |  default_pagination }}
-          {% endif %}
+          <div class="pagination-controls">
+           {{ paginate | default_pagination }}
+          </div>
         {% endpaginate %}
       </div>
      {% else %}
@@ -93,15 +94,15 @@
               >  
           </div>
         </div>
-        <div class="px-1 md:flex mb-3">
+        <div class="px-1 md:flex mb-6">
           <div class="md:w-full px-3">
             <label for="" class="text-gray-700 font-medium uppercase text-sm mb-2">Comment</label>
             <textarea class="w-full text-gray-700 resize-none h-20 py-2 px-3 focus:outline-none border" name="comment[body]" id="comment_content" required></textarea>
           </div>
         </div>
         <div class="px-1 md:flex mb-3">
-          <div class="md:w-full px-3">
-            <input type="submit" value="Post comment" class="w-full text-center cursor-pointer px-4 py-2 border text-base font-medium text-white bg-gray-900 hover:bg-gray-500">
+          <div class="md:w-full px-3 flex flex-col justify-center items-center">
+            <input type="submit" value="Post comment" class="w-fit text-center cursor-pointer px-4 py-2 border text-base font-medium text-white bg-gray-900 hover:bg-gray-500">
           </div>
         </div>
       </div>

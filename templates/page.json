@@ -28,6 +28,14 @@
     "section-richtext": {
       "type": "section-richtext",
       "settings": {}
+    },
+    "section-video": {
+      "type": "section-video",
+      "settings": {}
+    },
+    "section-media": {
+      "type": "section-media",
+      "settings": {}
     }
   },
   "order": [
@@ -35,6 +43,8 @@
     "section-image-text",
     "section-image-link",
     "section-image-grid",
-    "section-richtext"
+    "section-richtext",
+    "section-video",
+    "section-media"
   ]
 }
