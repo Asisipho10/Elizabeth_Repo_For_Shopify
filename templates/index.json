@@ -11,7 +11,21 @@
   "sections": {
     "section-banner_two": {
       "type": "section-banner_two",
+      "blocks": {
+        "text_Ex9Bke": {
+          "type": "text",
+          "settings": {
+            "header": "<p>HEAVENLY </p><p>TOUCH</p><p>SPA</p>",
+            "subheader": "<p>Escape the everyday stress and enjoy personalized treatments in our serene sanctuary, designed to refresh your mind, body, and spirit. Discover tranquility and indulgence at Heavenly Touch Spa.</p>",
+            "text_color": "#fff"
+          }
+        }
+      },
+      "block_order": [
+        "text_Ex9Bke"
+      ],
       "settings": {
+        "image": "shopify://shop_images/pexels-alesiakozik-7795398.png",
         "alignment": "items-center text-center",
         "justification": "justify-center justify-center"
       }
