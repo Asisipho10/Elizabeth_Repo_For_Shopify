@@ -8,8 +8,13 @@
  * ------------------------------------------------------------
  */
 {
-  "current": {},
-  "presets": {
-    "Default": {}
-  }
+  "sections": {
+    "section-404": {
+      "type": "section-404",
+      "settings": {}
+    }
+  },
+  "order": [
+    "section-404"
+  ]
 }
