@@ -7,44 +7,43 @@
 
 
 <section class="media-section flex flex-col justify-center items-center">
-  <div class="container max-w-[1200px] flex flex-col justify-center">
-    <div class="header flex mx-auto my-10">
-      <h1>{{ section.settings.cta_link_title }}</h1>
-    </div>     
-    <div class="faq__wrapper section--padded flex flex-row justify-center items-center">
-      <div class="image-block">
+  <div class="media-container max-w-[1920px] w-full flex flex-col justify-center">  
+    <div class="faq__wrapper flex flex-col md:flex-row justify-center md:max-h-[800px]">
+      <div class="image-block md:min-h-[400px] w-full md:w-2/5">
         <a href="{{ section.settings.image_url }}">
           <img 
-            class="faq-image w-full x-h-auto md:hidden"
-            src="{{ section.settings.dt_image | image }}" 
+            class="faq-image w-full h-auto md:hidden"
+            src="{{ section.settings.mb_image | image_url: width: '1200' }}"
+            srcset="{{ section.settings.mb_image | image_url: width: '1200' }} 768w"
+            sizes="(max-width: 767px) 100vw, 100vw"
             alt=""
           >
-
           <img
-            class="banner-image x-w-full x-h-auto x-hidden md:x-block"
+            class="banner-image w-full h-full hidden md:block"
             src="{{ section.settings.dt_image | image_url: width: '1200' }}" 
-            srcset="{{ section.settings.dt_image | image_url: width: '1200' }} 768w"
+            srcset="{{ section.settings.dt_image | image_url: width: '1200' }}"
             sizes="(max-width: 767px) 100vw, 100vw"
             alt="" 
           />  
         </a>
       </div>
-      <div class="faq__accordion w-full max-w-[900px]">
+      <div class="w-full md:w-3/5 md:pl-[20px] bg-[#f1f1f1] overflow-hidden">
+        <div class="faq__accordion max-w-[900px] px-[20px] md:px-0 flex flex-col justify-between">
+        <div class="man h-[90%] overflow-scroll">
         {%- for block in section.blocks -%}
           {%- if previous_block.type != 'article' -%}
             <accordion-group>
           {%- endif -%}
 
           <details id="faq-{{ section.id }}-{{ forloop.index }}" {{ block.shopify_attributes }}>
-            <summary class="flex flex-row justify-between ">
-              <span class="u-large 
-              text-black font-chivo text-[16px] font-bold leading-[1.4] uppercase">{{ block.settings.title | escape }}</span>
+            <summary class="flex flex-row justify-between bg-[#f1f1f1] p-2">
+              <span class="u-large text-black font-chivo text-[16px] font-bold leading-[1.4] uppercase">{{ block.settings.title | escape }}</span>
               {% render 'icon-plus' %}
             </summary>
 
             <details-content>
               {% unless block.settings.text == blank %}
-                <div class="faq__accordion__item-wrap rte text-[14px] text-black font-chivo font-light leading-[1.4]">
+                <div class="faq__accordion__item-wrap pl-2 pb-2 rte text-[14px] text-black font-chivo font-light leading-[1.4]">
                   {{ block.settings.text }}
                 </div>
               {% endunless %}
@@ -60,6 +59,8 @@
             </accordion-group>
           {%- endif -%}
         {%- endfor -%}
+        </div>
+        </div>
       </div>
     </div>
   </div>
@@ -71,10 +72,14 @@
   "class": "js-section__faq-page",
   "settings": [
     {
-      "type": "checkbox",
-      "id": "enable_sidebar",
-      "label": "Enable category sidebar",
-      "default": false
+      "type": "image_picker",
+      "id": "dt_image",
+      "label": "Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mb_image",
+      "label": "Desktop Image"
     },
     {
       "type": "header",
@@ -83,8 +88,7 @@
     {
       "type": "text",
       "id": "cta_link_title",
-      "label": "Link label",
-      "default": "Contact us"
+      "label": "Link label"
     },
     {
       "type": "url",
@@ -152,8 +156,7 @@
         {
           "type": "liquid",
           "id": "liquid-text",
-          "label": "liquid-text",
-          "default": "<p>Use these articles to answer questions that customers have about your products and services. You can use text, links and images and also group articles into categories.</p>"
+          "label": "liquid-text"
         }
       ]
     }

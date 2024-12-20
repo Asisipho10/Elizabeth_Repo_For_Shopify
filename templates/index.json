@@ -230,6 +230,10 @@
         "padding_bottom": 20
       }
     },
+    "section-banner_two": {
+      "type": "section-banner_two",
+      "settings": {}
+    },
     "section_image_grid_UTa6Df": {
       "type": "section-image-grid",
       "blocks": {
@@ -296,6 +300,7 @@
     "section_image_text_3wrny8",
     "section_image_link_3hTLBg",
     "section-faq",
-    "section_image_grid_UTa6Df"
+    "section_image_grid_UTa6Df",
+    "section-banner_two"
   ]
 }

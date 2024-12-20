@@ -1,0 +1,123 @@
+
+<div class="banner-section w-full h-[600px] lg:h-[800px] bg-cover bg-center relative flex flex-col"
+    style="background-image: url('{{ section.settings.image |  image_url: width: '2000' }}')">
+
+  <div class="content-wrapper absolute bg-[#000] opacity-[0.65] h-3/4 md:h-full md:w-1/2 bottom-0 md:top-0 left-0 flex flex-col justify-center">
+    {% for block in section.blocks %}
+      <div class="px-8 md:px-12 lg:px-20">
+        <div class="header-wrapper overflow-x-clip">
+          <h1 class="text-[60px] lg:text-[110px] uppercase leading-[120%] "
+              style="color: {{ block.settings.text_color }};">{{ block.settings.header }}</h1>
+        </div>
+        <div class="text-wrapper text-justify text-[16px] lg:text-[18px]"
+             style="color: {{ block.settings.text_color }};">
+                {{ block.settings.subheader }}
+        </div>
+        <div class="button-section mt-10 flex flex-row gap-4 md:gap-6">
+          <div class="btn-1 w-1/2">
+            <div class="w-full text-center px-10 py-4  bg-slate-200 mx-auto">
+              <a class="text-[16px] w-full uppercase" href="">
+                MAKE RESERVATION  
+              </a>
+            </div>
+          </div>
+          <div class="btn-2 w-1/2">
+            <div class="w-full text-center px-10 py-4  bg-slate-200 mx-auto">
+              <a class="text-[16px] w-full uppercase" href="">
+                OUR TREATMENTS  
+              </a>
+            </div>
+          </div>
+        </div>  
+      </div>
+    {% endfor %}
+  </div>
+  <div class="absolute bottom-0 mx-auto my-8 w-full flex flex-row justify-center">
+    <h1 class="text-white">SCROLL EXPLORE</h1>  
+  </div>
+</div>
+
+
+
+{% schema %}
+{
+  "name": "Banner Two",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background Image"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "default": "items-center text-center",
+      "label": "Content Alignment",
+      "options": [
+           {
+             "value": "items-start text-start",
+             "label": "Left"
+           },
+           {
+             "value": "items-center text-center",
+             "label": "Center"
+           },
+           {
+             "value": "items-end text-end",
+             "label": "Right"
+           }
+         ]
+       },
+       {
+         "type": "select",
+         "id": "justification",
+         "default": "justify-center justify-center",
+         "label": "Content Justify",
+         "options": [
+           {
+             "value": "justify-start justify-start",
+             "label": "top"
+           },
+           {
+             "value": "justify-center justify-center",
+             "label": "Center"
+           },
+           {
+             "value": "justify-end justify-end",
+             "label": "bottom"
+           }
+         ]
+       }
+   ],
+   "blocks": [
+       {
+           "name": "Text",
+           "type": "text",
+           "settings": [
+               {
+                   "type": "richtext",
+                   "id": "header",
+                   "label": "Header"
+               },
+               {
+                   "type": "richtext",
+                   "id": "subheader",
+                   "label": "Subheader"
+               },
+               {
+                   "type": "color",
+                   "id": "text_color",
+                   "label": "Text Color",
+                   "default": "#fff"
+               }
+           ] 
+       }
+   ],
+   "presets": [
+       {
+           "name": "Banner Two",
+           "category": "Custom Sections"
+       }
+   ]
+}
+{% endschema %}
