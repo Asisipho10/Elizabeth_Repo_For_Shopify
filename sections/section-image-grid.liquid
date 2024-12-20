@@ -26,21 +26,34 @@
 
 
 
-<div class="image-grid-section grid justify-center">
+<div class="image-grid-section grid justify-center px-4">
   <div class="image-grid-container flex flex-row justify-center items-center "
        style="max-width: {{ section.settings.page_width }}px;
               padding-top: {{ section.settings.padding_top }}px;
               padding-bottom: {{ section.settings.padding_bottom }}px;">
       <div class="image-block-section">
         {% for block in section.blocks %}
+
           <div class="relative span-cols-{{ block.settings.column_span }}">
             <a href="{{ block.settings.image_url }}">
               <img 
                 src="{{ block.settings.image | image_url: width: '1000' }}" 
                 alt="image"
               >
-            </a>
-          </div>              
+              </a>
+              {% if block.settings.text != blank %}
+                <div class="absolute bottom-1 left-0 py-2"
+                    style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);"
+                  >
+                  <div class="floating-text p-10"
+                      style="font-size: {{ block.settings.text_size }}; 
+                             color: {{ block.settings.text_color }};"
+                    >
+                    {{ block.settings.text }}
+                  </div>
+                </div>
+              {% endif %}
+          </div>
         {% endfor %}
     </div>
   </div>  
@@ -107,6 +120,23 @@
           "default": 1,
           "min": 1,
           "max": 4
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text Color",
+          "default": "#fff"
+        },
+        {
+          "type": "number",
+          "id": "text_size",
+          "label": "Text size",
+          "default": 20
         }
       ]
     }  
