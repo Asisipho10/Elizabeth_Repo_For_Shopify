@@ -1,16 +1,17 @@
 {% assign main_menu_linklist = linklists[section.settings.menu].links %}
 
-<div class="relative bg-black bg-opacity-75" x-data="{ mobileMenuOpen: false }">
-  <div class="mx-auto px-4 sm:px-6">
-    <div class="flex justify-between items-center py-6 md:justify-start md:space-x-10">
+<div class="relative w-full">
+<div class="sticky top-0 z-50 left-0 w-full" x-data="{ mobileMenuOpen: false }">
+  <div class="absolute w-full mx-auto px-4 sm:px-6 bg-black bg-opacity-35 mt-[8px]">
+    <div class="flex justify-between items-center py-10 md:justify-center mx-auto">
       <!-- STORE NAME / STORE LOGO -->
-      <div class="flex justify-start lg:flex-1 truncate">
+      <div class="flex justify-start md:flex-1 trunc">
         <img src="https://cdn.shopify.com/s/files/1/0900/4875/8049/files/Vector.png?v=1734618569" alt="">
       </div>
 
       <!-- HAMBURGER MENU BUTTON FOR MOBILE -->
-      <div class="block md:hidden -mr-2 -my-2 ml-3">
-        <button x-on:click="mobileMenuOpen = !mobileMenuOpen" type="button" class="bg-white p-2 inline-flex items-center justify-center focus:outline-none">
+      <div class="block md:hidden">
+        <button x-on:click="mobileMenuOpen = !mobileMenuOpen" type="button" class="text-white inline-flex items-center justify-center focus:outline-none">
           <!-- HAMBURGER ICON (shown when mobileMenuOpen is false) -->
           <span x-show="!mobileMenuOpen">
             {% render 'icon-menu' %}
@@ -23,7 +24,7 @@
       </div>
 
       <!-- DESKTOP NAVIGATION MENU -->
-      <nav x-data="{ open: false }" class="hidden md:flex space-x-10">
+      <nav x-data="{ open: false }" class="hidden md:flex md:justify-center space-x-10">
         {% for link in linklists.main-menu.links %}
             {% if link.links != blank %}
               <div class="relative">
@@ -64,24 +65,24 @@
   </div>
 
   <!-- MOBILE MENU CONTENT -->
-  <div x-show="mobileMenuOpen" class="absolute z-10 top-0 inset-x-0 p-2 transform origin-top-left md:hidden">
-    <div class="shadow-lg rounded-lg ring-1 ring-black ring-opacity-5 bg-white w-full">
+  <div x-show="mobileMenuOpen" class="absolute z-10 top-0 inset-x-0 transform origin-top-left md:hidden">
+    <div class="shadow-lg h-screen ring-1 ring-black ring-opacity-5 bg-[#000] bg-opacity-85 text-white w-full">
       <div class="p-5 divide-y-2 divide-white-50">
         <!-- MOBILE MENU HEADER WITH STORE NAME AND CLOSE BUTTON -->
-        <div class="flex items-center justify-between pb-3">
+        <div class="flex items-center justify-between py-4">
           <div>
-            <h1 class="text-lg text-white-500">{{ section.settings.mobile_menu_title }}</h1>
+            <h1 class="text-lg text-white-500 uppercase">{{ section.settings.mobile_menu_title }}</h1>
           </div>
           <div class="-mr-2">
-            <button x-on:click="mobileMenuOpen = false" type="button" class="bg-white rounded-md p-2 text-white-500">
+            <button x-on:click="mobileMenuOpen = false" type="button" class="p-2 text-white-500">
               {% render 'icon-close' %}
             </button>
           </div>
         </div>
 
         <!-- MOBILE MENU LINKS -->
-        <div class="pt-3">
-          <nav class="grid gap-y-7">
+        <div class="pt-3 flex flex-row justify-around">
+          <nav class="grid gap-y-7 w-full">
             {% for link in main_menu_linklist %}
               {% assign link_handle = link.handle | replace: '-', '_' %}
               {% if link.links != blank %}
@@ -103,7 +104,7 @@
                   </div>
                 </div>
               {% else %}
-                <a href="#" class="-m-3 p-3 flex items-center rounded-md text-white-500 hover:text-white-900 hover:bg-white-50">
+                <a href="#" class="w-full flex flex-col text-center items-center text-[20px] uppercase py-4 text-white-500 hover:text-white-900 hover:bg-white-50">
                   {{ link.title }}
                 </a>
               {% endif %}
@@ -114,7 +115,7 @@
     </div>
   </div>
 </div>
-
+</div>
 
 {% schema %}
 {
@@ -123,7 +124,7 @@
       {
         "type": "liquid",
         "id": "liquid_text",
-        "Label": "Logo"
+        "label": "Logo"
       },
       {
         "type": "text",

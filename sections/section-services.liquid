@@ -1,0 +1,85 @@
+
+<div class="secvices-section mx-auto max-w-[1440px] my-8">
+  {% if section.settings.card_text != blank %}
+    <div class="header-block my-8 flex flex-col items-center">
+      <div class="header leading-[100%] uppercase text-[40px]">
+        <h1>{{ section.settings.card_text }}</h1>  
+      </div>
+      <div class="subheader leading-[100%]">
+        <div>{{ section.settings.card_subtext }}</div>  
+      </div>
+    </div>
+  {% endif %}
+  <div class="services-container grid sm:grid-cols-2 md:flex md:flex-row xl:justify-center items-center gap-[20px] md:overflow-x-scroll px-6">
+    {% for block in section.blocks %}
+      <div class="card-block w-2/2 md:w-full hover:text-white bg-cover bg-[#f4f4f4] px-4 py-6 md:min-w-[300px]"
+           style="background-image: none;"
+           onmouseover="this.style.backgroundImage = 'url({{ block.settings.image | image_url: width: 2000 }})';"
+           onmouseout="this.style.backgroundImage = 'none';">
+        <div class="card-header text-[24px] md:text-[32px] leading-[140%] mt-4">
+          {{ block.settings.card_text }}
+        </div>
+        <div class="card-text text-[14px] md:text-[16px] leading-[120%] my-8">
+          {{ block.settings.subtext }}
+        </div>
+        <div class="card-btn">
+          <a class="uppercase hover:tracking-[4px]" href="">
+            {{ block.settings.cta_btn }}
+          </a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>  
+</div>
+
+
+{% schema %}
+{
+  "name": "Services Blocks",
+  "settings": [
+      {
+        "type": "text",
+        "id": "card_text",
+        "label": "Text"  
+      },
+      {
+        "type": "richtext",
+        "id": "card_subtext",
+        "label": "Subtext"  
+      }
+    ],
+    "blocks": [
+      {
+        "name": "card-block",
+        "type": "card-block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Background Card Image"
+          },
+          {
+            "type": "text",
+            "id": "card_text",
+            "label": "Text"  
+          },
+          {
+            "type": "richtext",
+            "id": "subtext",
+            "label": "Subtext"  
+          },
+          {
+            "type": "text",
+            "id": "cta_btn",
+            "label": "Button"  
+          }
+        ]
+      }
+  ],
+  "presets": [
+    {
+      "name": "Services Blocks"  
+    }
+  ]
+}
+{% endschema %}
