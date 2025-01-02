@@ -1,8 +1,8 @@
 
-<div class="banner-section w-full h-[600px] lg:h-[800px] bg-cover bg-center relative flex flex-col"
+<div class="banner-section w-full h-[700px] md:h-[800px] lg:h-[900px] bg-cover bg-center relative flex flex-col"
     style="background-image: url('{{ section.settings.image |  image_url: width: '2000' }}')">
 
-  <div class="content-wrapper absolute bg-[#000] opacity-[0.65] h-3/4 md:h-full md:w-1/2 bottom-0 md:top-0 left-0 flex flex-col justify-center">
+  <div class="content-wrapper absolute bg-[#000] opacity-[0.65] h-3/4 md:h-full md:w-1/2 bottom-0 md:top-0 left-0 pt-[20px] md:pt-0 flex flex-col md:justify-center">
     {% for block in section.blocks %}
       <div class="px-8 md:px-12 lg:px-20">
         <div class="header-wrapper overflow-x-clip">
@@ -15,14 +15,14 @@
         </div>
         <div class="button-section mt-10 flex flex-row gap-4 md:gap-6">
           <div class="btn-1 w-1/2">
-            <div class="w-full text-center px-10 py-4  bg-slate-200 mx-auto">
+            <div class="w-full h-full text-center px-4 py-4 bg-white bg-opacity-80 mx-auto">
               <a class="text-[16px] w-full uppercase" href="">
                 MAKE RESERVATION  
               </a>
             </div>
           </div>
           <div class="btn-2 w-1/2">
-            <div class="w-full text-center px-10 py-4  bg-slate-200 mx-auto">
+            <div class="w-full h-full flex flex-row items-center text-center px-4 py-4 bg-white bg-opacity-80 m-auto">
               <a class="text-[16px] w-full uppercase" href="">
                 OUR TREATMENTS  
               </a>
@@ -32,8 +32,8 @@
       </div>
     {% endfor %}
   </div>
-  <div class="absolute bottom-0 mx-auto my-8 w-full flex flex-row justify-center">
-    <h1 class="text-white">SCROLL EXPLORE</h1>  
+  <div class="absolute bottom-0 mx-auto my-6 md:my-10 w-full flex flex-row justify-center">
+    <h1 class="text-white text-[20px] tracking-[4px] hover:tracking-[6px] md:tracking-[8px] md:hover:tracking-[12px]">SCROLL EXPLORE</h1>  
   </div>
 </div>
 

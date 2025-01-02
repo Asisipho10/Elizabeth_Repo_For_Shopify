@@ -9,6 +9,26 @@
  */
 {
   "sections": {
+    "section-services": {
+      "type": "section-services",
+      "settings": {}
+    },
+    "section-image-decoration": {
+      "type": "section-image-decoration",
+      "settings": {}
+    },
+    "section-subscribtion": {
+      "type": "section-subscribtion",
+      "settings": {}
+    },
+    "section-flex-grid": {
+      "type": "section-flex-grid",
+      "settings": {}
+    },
+    "section-reviews": {
+      "type": "section-reviews",
+      "settings": {}
+    },
     "section-banner_two": {
       "type": "section-banner_two",
       "blocks": {
@@ -32,6 +52,11 @@
     }
   },
   "order": [
-    "section-banner_two"
+    "section-banner_two",
+    "section-services",
+    "section-image-decoration",
+    "section-subscribtion",
+    "section-flex-grid",
+    "section-reviews"
   ]
 }

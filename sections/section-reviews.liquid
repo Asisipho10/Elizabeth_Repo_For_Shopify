@@ -1,0 +1,39 @@
+<div class="reviews-section bg-black">
+  <div class="reviews-container flex flex-col justify-center items-center">
+    <div class="header flex flex-col justify-center items-center my-10">
+      <h1 class="text-5xl text-white">WHAT OUR CUSTOMERS SAY</h1>  
+    </div>
+    <div class="content max-w-[800px] my-10">
+      <div class="flex flex-row justify-center items-center h-[200px] overflow-clip gap-8">
+        <div class="w-1/4">
+          <img class="rounded-md" src="https://cdn.shopify.com/s/files/1/0900/4875/8049/files/pexels-shvetsa-5069609.png?v=1734954352" alt="">
+        </div>
+        <div class="w-3/4 flex flex-col justify-around h-full">
+          <h1 class="text-5xl text-white">Jack M. <span>"</span></h1>
+          <div class="text-block text-white">
+            Each image captures the essence of our tranquil oasis, showcasing the luxurious environments, soothing treatments, and peaceful moments that await you.
+          </div>
+        </div>
+      </div>  
+    </div>
+  </div>  
+</div>
+
+
+{% schema %}
+{
+  "name": "Reviews",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text"  
+    }    
+  ],
+  "presets": [
+    {
+      "name": "Reviews"  
+    }
+  ]
+}
+{% endschema %}
