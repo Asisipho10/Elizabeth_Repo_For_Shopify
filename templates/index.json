@@ -9,26 +9,6 @@
  */
 {
   "sections": {
-    "section-services": {
-      "type": "section-services",
-      "settings": {}
-    },
-    "section-image-decoration": {
-      "type": "section-image-decoration",
-      "settings": {}
-    },
-    "section-subscribtion": {
-      "type": "section-subscribtion",
-      "settings": {}
-    },
-    "section-flex-grid": {
-      "type": "section-flex-grid",
-      "settings": {}
-    },
-    "section-reviews": {
-      "type": "section-reviews",
-      "settings": {}
-    },
     "section-banner_two": {
       "type": "section-banner_two",
       "blocks": {
@@ -37,7 +17,7 @@
           "settings": {
             "header": "<p>HEAVENLY </p><p>TOUCH</p><p>SPA</p>",
             "subheader": "<p>Escape the everyday stress and enjoy personalized treatments in our serene sanctuary, designed to refresh your mind, body, and spirit. Discover tranquility and indulgence at Heavenly Touch Spa.</p>",
-            "text_color": "#fff"
+            "text_color": "#ffffff"
           }
         }
       },
@@ -48,6 +28,62 @@
         "image": "shopify://shop_images/pexels-alesiakozik-7795398.png",
         "alignment": "items-center text-center",
         "justification": "justify-center justify-center"
+      }
+    },
+    "section-services": {
+      "type": "section-services",
+      "settings": {
+        "card_text": "",
+        "card_subtext": ""
+      }
+    },
+    "section-image-decoration": {
+      "type": "section-image-decoration",
+      "settings": {}
+    },
+    "section-subscribtion": {
+      "type": "section-subscribtion",
+      "disabled": true,
+      "settings": {
+        "text": "Join Our Loyalty Program",
+        "subtext": "<p>Become a part of our Sweet Spa family by joining our loyalty program. Enjoy exclusive discounts, priority bookings, and special offers reserved just for our members.</p>",
+        "below_text": "<p>Be the first to know about our latest treatments, exclusive offers, and wellness tips.</p>",
+        "btn_text": "Subscribe",
+        "button_url": "",
+        "btn_bg_color": "#fff",
+        "btn_text_color": "#000",
+        "right_text_1": "<p>WHY JOIN US?</p>",
+        "right_text_2": "<p>HOW IT WORKS</p>",
+        "footer_text_1": "<p>VIEW OFFERS</p>",
+        "footer_text_2": "<p>FIND & BOOK</p>"
+      }
+    },
+    "section-flex-grid": {
+      "type": "section-flex-grid",
+      "blocks": {
+        "image_block_BBcJbG": {
+          "type": "image-block",
+          "settings": {
+            "image": "shopify://shop_images/pexels-cottonbro-3997994.png",
+            "custom_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_block_BBcJbG"
+      ],
+      "settings": {
+        "text": "",
+        "subtext": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "section-reviews": {
+      "type": "section-reviews",
+      "disabled": true,
+      "settings": {
+        "text": ""
       }
     }
   },
