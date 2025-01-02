@@ -60,18 +60,7 @@
     },
     "section-flex-grid": {
       "type": "section-flex-grid",
-      "blocks": {
-        "image_block_BBcJbG": {
-          "type": "image-block",
-          "settings": {
-            "image": "shopify://shop_images/pexels-cottonbro-3997994.png",
-            "custom_class": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_block_BBcJbG"
-      ],
+      "disabled": true,
       "settings": {
         "text": "",
         "subtext": "",
