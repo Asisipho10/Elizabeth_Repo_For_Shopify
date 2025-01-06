@@ -26,8 +26,8 @@
       ],
       "settings": {
         "image": "shopify://shop_images/hhhh.jpg",
-        "alignment": "items-center text-center",
-        "justification": "justify-center justify-center"
+        "alignment": "items-end text-end",
+        "justification": "justify-end justify-end"
       }
     },
     "section-services": {
