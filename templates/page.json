@@ -9,8 +9,8 @@
  */
 {
   "sections": {
-    "section-faq": {
-      "type": "section-faq",
+    "section-socials-gallery": {
+      "type": "section-socials-gallery",
       "settings": {}
     },
     "section-image-text": {
@@ -39,7 +39,7 @@
     }
   },
   "order": [
-    "section-faq",
+    "section-socials-gallery",
     "section-image-text",
     "section-image-link",
     "section-image-grid",
