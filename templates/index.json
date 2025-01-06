@@ -15,8 +15,8 @@
         "text_Ex9Bke": {
           "type": "text",
           "settings": {
-            "header": "<p>HEAVENLY </p><p>TOUCH</p><p>SPA</p>",
-            "subheader": "<p>Escape the everyday stress and enjoy personalized treatments in our serene sanctuary, designed to refresh your mind, body, and spirit. Discover tranquility and indulgence at Heavenly Touch Spa.</p>",
+            "header": "<p>Supa Ovens</p>",
+            "subheader": "<h1>We deliver nationwide, Get your pizza oven delivered to your door step<br/><br/>You don't need to be a qualified chef to make your own pizza come up with your own recipe and enjoy your own pizza. At Super Ovens, we provide top-quality, handcrafted pizza ovens designed to bring the joy of homemade pizza to your home or business. </h1>",
             "text_color": "#ffffff"
           }
         }
@@ -25,7 +25,7 @@
         "text_Ex9Bke"
       ],
       "settings": {
-        "image": "shopify://shop_images/pexels-alesiakozik-7795398.png",
+        "image": "shopify://shop_images/WhatsApp_Image_2024-11-29_at_09.34.58.jpg",
         "alignment": "items-center text-center",
         "justification": "justify-center justify-center"
       }
