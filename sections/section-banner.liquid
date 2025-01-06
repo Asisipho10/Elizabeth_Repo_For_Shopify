@@ -1,118 +1,139 @@
 
 <div class="img-wrapper w-full h-[400px] bg-cover bg-center relative bg-blend-darken bg-opacity-40"
     style="background-image: url('{{ section.settings.image |  image_url: width: '2000' }}')">
-
-
   {% comment %} <div class="img-wrapper w-full h-[400px] bg-cover bg-center relative"
      style="background-image: url('{{ section.settings.image_left | image_url: width: "2000" }}'), url('{{ section.settings.image_right | image_url: width: "2000" }}'); 
             background-size: 50% 100%; 
             background-position: left center, right center; 
             background-repeat: no-repeat;"
         > {% endcomment %}
-    <div class="content-wrapper absolute top-0 left-0 w-full h-full flex flex-col justify-{{ section.settings.justification }} items-{{ section.settings.alignment }}">
-        {% for block in section.blocks %}
-            <div class="p-10">
-                <div class="header-wrapper ">
-                    <h1 class="text-[40px] md:text-[60px] uppercase"
-                    style="color: {{ block.settings.text_color }};">{{ block.settings.header }}</h1>
-                </div>
-                <div class="text-wrapper mt-8"
-                    style="color: {{ block.settings.text_color }};">
-                    {{ block.settings.subheader }}
-                </div>
-                <div class="mt-4 gap-4 md:gap-6">
-                  <div class="py-4 bg-white bg-opacity-60 max-w-[200px] text-center">
-                    <a class="text-[16px] w-full uppercase" href="">
-                      OUR TREATMENTS  
-                    </a>
-                  </div>
-                </div>
-            </div>
-        {% endfor %}
-    </div>
+  <div class="content-wrapper absolute top-0 left-0 w-full h-full flex flex-col justify-{{ section.settings.justification }} items-{{ section.settings.alignment }}">
+    {% for block in section.blocks %}
+      <div class="p-10">
+        <div class="header-wrapper ">
+          <h1 class="text-[40px] md:text-[60px] uppercase leading-[120%]"
+           style="color: {{ block.settings.text_color }};">{{ block.settings.header }}</h1>
+        </div>
+        <div class="text-wrapper"
+             style="color: {{ block.settings.text_color }};">
+              {{ block.settings.subheader }}
+        </div>
+        <div class="mt-8 gap-4 md:gap-6">
+          <a class="text-[14px] max-w-[300px] text-white py-4 px-6 w-full uppercase" href=""
+             style="background-color: {{ block.settings.btn_bg_color }}; opacity: 0.{{ block.settings.btn_bg_opacity }}; color: {{ block.settings.btn_text_color }};">
+              {{ block.settings.btn_text }} 
+          </a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
 </div>
 
 
 
 {% schema %}
 {
-    "name": "Banner",
-    "settings": [
+  "name": "Banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background Image"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "default": "items-center text-center",
+      "label": "Content Alignment",
+      "options": [
+           {
+             "value": "items-start text-start",
+             "label": "Left"
+           },
+           {
+             "value": "items-center text-center",
+             "label": "Center"
+           },
+           {
+             "value": "items-end text-end",
+             "label": "Right"
+           }
+         ]
+       },
+       {
+         "type": "select",
+         "id": "justification",
+         "default": "justify-center justify-center",
+         "label": "Content Justify",
+         "options": [
+           {
+             "value": "justify-start justify-start",
+             "label": "top"
+           },
+           {
+             "value": "justify-center justify-center",
+             "label": "Center"
+           },
+           {
+             "value": "justify-end justify-end",
+             "label": "bottom"
+           }
+         ]
+       }
+  ],
+  "blocks": [
+    {
+      "name": "Text",
+      "type": "text",
+      "settings": [
         {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Background Image"
+          "type": "text",
+          "id": "header",
+          "label": "Header"
         },
         {
-          "type": "select",
-          "id": "alignment",
-          "default": "items-center text-center",
-          "label": "Content Alignment",
-          "options": [
-            {
-              "value": "items-start text-start",
-              "label": "Left"
-            },
-            {
-              "value": "items-center text-center",
-              "label": "Center"
-            },
-            {
-              "value": "items-end text-end",
-              "label": "Right"
-            }
-          ]
+          "type": "richtext",
+          "id": "subheader",
+          "label": "Subheader"
         },
         {
-          "type": "select",
-          "id": "justification",
-          "default": "justify-center justify-center",
-          "label": "Content Justify",
-          "options": [
-            {
-              "value": "justify-start justify-start",
-              "label": "top"
-            },
-            {
-              "value": "justify-center justify-center",
-              "label": "Center"
-            },
-            {
-              "value": "justify-end justify-end",
-              "label": "bottom"
-            }
-          ]
-        }
-    ],
-    "blocks": [
+          "type": "color",
+          "id": "text_color",
+          "label": "Text Color",
+          "default": "#fff"
+        },
         {
-            "name": "Text",
-            "type": "text",
-            "settings": [
-                {
-                    "type": "text",
-                    "id": "header",
-                    "label": "Header"
-                },
-                {
-                    "type": "richtext",
-                    "id": "subheader",
-                    "label": "Subheader"
-                },
-                {
-                    "type": "color",
-                    "id": "text_color",
-                    "label": "Text Color",
-                    "default": "#fff"
-                }
-            ] 
-        }
-    ],
-    "presets": [
+          "type": "text",
+          "id": "btn_text",
+          "label": "Button"
+        },
         {
-            "name": "Banner",
-            "category": "Custom Sections"
+          "type": "color",
+          "id": "btn_text_color",
+          "label": "Button text Color",
+          "default": "#000"
+        },
+        {
+          "type": "color_background",
+          "id": "btn_bg_color",
+          "label": "Button Color",
+          "default": "#fff"
+        },
+        {
+          "type": "number",
+          "id": "btn_bg_opacity",
+          "label": "Button Opacity",
+          "default": 6,
+          "info": "Add any number from 1-9"
         }
-    ]
+      ] 
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner",
+      "category": "Custom Sections"
+    }
+  ]
 }
 {% endschema %}

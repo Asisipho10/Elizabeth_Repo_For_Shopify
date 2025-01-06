@@ -1,3 +1,29 @@
+<style>
+.menu-drawer-links {
+  position: relative;
+  display: inline-block; 
+}
+
+.menu-drawer-links::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(255, 255, 255, 1), rgba(0, 0, 0, 1));
+  transition: width 0.3s ease-in-out;
+}
+
+.menu-drawer-links:hover::after {
+  width: 100%;
+}
+</style>
+
+
+
+
+
 {% assign main_menu_linklist = linklists[section.settings.menu].links %}
 
 <div class="relative w-full">
@@ -65,7 +91,7 @@
   </div>
 
   <!-- MOBILE MENU CONTENT -->
-  <div x-show="mobileMenuOpen" class="absolute z-10 top-0 inset-x-0 transform origin-top-left md:hidden">
+  <div x-show="mobileMenuOpen" class="absolute z-10 top-0 inset-x-0 transform scroll-smooth origin-top-left md:hidden">
     <div class="shadow-lg h-screen ring-1 ring-black ring-opacity-5 bg-[#000] bg-opacity-85 text-white w-full">
       <div class="p-5 divide-y-2 divide-white-50">
         <!-- MOBILE MENU HEADER WITH STORE NAME AND CLOSE BUTTON -->
@@ -90,21 +116,21 @@
                   <button 
                     x-on:click="{{ link_handle }} = !{{ link_handle }}" 
                     type="button" 
-                    class="text-base text-white-500 hover:text-white-900 flex items-center justify-between w-full">
-                    <div>{{ link.title }}</div>
+                    class="text-base bg-white hover:bg-white flex items-center justify-between w-full">
+                    {% comment %} <div>{{ link.title }}</div> {% endcomment %}
                     {% render 'icon-dropdown' %}
                   </button>
                   <!-- CHILD MENU -->
                   <div x-show="{{ link_handle }}" class="grid gap-y-7 py-3">
                     {% for childlink in link.links %}
-                      <a href="#" class="-m-3 p-3 mt-2 flex items-center rounded-md text-white-500 hover:text-white-900 hover:bg-white-50">
+                      <a href="#" class="-m-3 p-3 mt-2 flex items-center rounded-md text-white-500 hover:text-white-900 hover:bg-white">
                         <span class="ml-3 text-base font-medium text-white-500">{{ childlink.title }}</span>
                       </a>
                     {% endfor %}
                   </div>
                 </div>
               {% else %}
-                <a href="#" class="w-full flex flex-col text-center items-center text-[20px] uppercase py-4 text-white-500 hover:text-white-900 hover:bg-white-50">
+                <a href="#" class="menu-drawer-links w-full flex flex-col text-center items-center text-[20px] uppercase py-4 text-white">
                   {{ link.title }}
                 </a>
               {% endif %}
