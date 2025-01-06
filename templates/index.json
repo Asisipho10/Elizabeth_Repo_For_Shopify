@@ -41,8 +41,8 @@
       "type": "section-image-decoration",
       "settings": {}
     },
-    "section-section-products": {
-      "type": "section-section-products",
+    "section-products": {
+      "type": "section-products",
       "settings": {}
     },
     "section-subscribtion": {
