@@ -41,10 +41,6 @@
       "type": "section-image-decoration",
       "settings": {}
     },
-    "section-products": {
-      "type": "section-products",
-      "settings": {}
-    },
     "section-subscribtion": {
       "type": "section-subscribtion",
       "disabled": true,
@@ -77,6 +73,14 @@
       "disabled": true,
       "settings": {
         "text": ""
+      }
+    },
+    "section-products": {
+      "type": "section-products",
+      "disabled": true,
+      "settings": {
+        "text": "",
+        "image": "shopify://shop_images/WhatsApp_Image_2024-11-29_at_09.23.46.jpg"
       }
     }
   },
