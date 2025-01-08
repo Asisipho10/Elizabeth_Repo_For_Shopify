@@ -3637,10 +3637,6 @@ video {
     line-height: 1.75rem;
   }
 
-  .md\:leading-\[140\%\] {
-    line-height: 140%;
-  }
-
   .md\:leading-\[100\%\] {
     line-height: 100%;
   }
