@@ -1,0 +1,207 @@
+<style>
+  body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #f9f9f9;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 100;
+    }
+
+    .dropdown-content input {
+      padding: 5px;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .dropdown-content button {
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .dropdown button {
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+</style>
+
+
+<div class="bookings-section">
+  <div class="bookings-container">
+    <div class="img-wrapper w-full h-[400px] bg-cover bg-center bg-blend-darken relative"
+        style="background-image: url('https://cdn.shopify.com/s/files/1/0900/4875/8049/files/pexels-castorlystock-3872899.png?v=1734617915')">
+      <div class="content-wrapper absolute top-0 left-0 w-full h-full flex flex-col justify-start items-start">
+        <div class="p-10">
+          <div class="header-wrapper ">
+            <h1 class="text-[40px] md:text-[60px] uppercase leading-[120%] text-white">A PLACE OF PARADISE</h1>
+          </div>
+          <div class="text-wrapper mt-6 text-white">
+            BOOK YOUR SESSION WITH YOUR DEMANDS
+          </div>
+          <div class="mt-4 gap-4 md:gap-6">
+            <a class="text-[14px] max-w-[300px] bg-white bg-opacity-50 py-4 px-6 w-full uppercase" href="">
+              MAKE RESERVATION
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="filter-block pb-8">
+      <div class="flex flex-row justify-center items-center bg-black gap-3 p-[10px] md:p-[10px] max-w-[900px] mx-auto h-full">
+        <div class="w-5/12 bg-white flex flex-row justify-between items-center p-3">
+        <div class="service">
+            Services
+          </div>
+          <div class="bookings-dropdown">
+            {% render 'icon-dropdown' %}
+          </div>
+        </div>
+        <div class="w-4/12 h-full bg-white flex flex-row justify-between items-center p-3">
+          <div class="service">
+            <div class="dropdown">
+          <button id="dropdown-toggle">Select Date</button>
+
+          <div class="dropdown-content" id="dropdown-content">
+            <form action="/search" method="GET">
+              <label for="date">Choose a date:</label>
+              <input type="date" id="date" name="date" required>
+            </form>
+          </div>
+        </div>
+          </div>
+          <div class="bookings-dropdown">
+            {% render 'icon-dropdown' %}
+          </div>
+        </div>
+        <div class="w-3/12 bg-white flex flex-row justify-between items-center p-3">
+          <div class="service">
+            No. of People
+          </div>
+          <div class="bookings-dropdown">
+            {% render 'icon-dropdown' %}
+          </div>
+        </div>
+      </div>  
+    </div>
+
+    <div class="service-headers">
+      <div class="flex flex-row justify-center items-center p-8 max-w-[1200px] mx-auto">
+        <div class="w-4/12 flex flex-row justify-start text-[20px]">SERVICES</div>
+        <div class="w-6/12 flex flex-row justify-start text-[20px]">OFFERS</div>
+        <div class="sm:w-2/12 flex flex-row justify-end text-[20px]">AVAILABILITY</div>
+      </div>  
+    </div>
+
+    <div class="services-block bg-[#f4f4f4] py-4">
+      <div class="flex flex-row justify-center items-center p-8 max-w-[1200px] mx-auto">
+        <div class="w-4/12 flex flex-col justify-start">
+          <div class="service text-[20px]">Foot Massage</div>
+          <div class="price flex flex-row justify-center items-end gap-[4px]"><span class="text-[8px] pb-[3px]">FROM</span> R300</div>
+        </div>
+        <div class="w-6/12 flex flex-row justify-start pr-[20px]">Relieve tension and restore balance with our rejuvenating foot massage.</div>
+        <div class="w-2/12 flex flex-row justify-end">Make Reservation</div>
+      </div> 
+      <hr class="bg-black max-w-[1200px] mx-auto">
+      <div class="flex flex-row justify-center items-center p-8 max-w-[1200px] mx-auto">
+        <div class="w-4/12 flex flex-col justify-start">
+          <div class="service text-[20px]">Oil Therapy</div>
+          <div class="price flex flex-row justify-center items-end gap-[4px]"><span class="text-[8px] pb-[3px]">FROM</span> R250</div>
+        </div>
+        <div class="w-6/12 flex flex-row justify-start pr-[20px]">Experience the healing power of essential oils with our Oil Therapy, a holistic treatment for mind and body.</div>
+        <div class="w-2/12 flex flex-row justify-end">Make Reservation</div>
+      </div> 
+      <hr class="bg-black max-w-[1200px] mx-auto">
+      <div class="flex flex-row justify-center items-center p-8 max-w-[1200px] mx-auto">
+        <div class="w-4/12 flex flex-col justify-start">
+          <div class="service text-[20px]">Body Treatment</div>
+          <div class="price flex flex-row justify-center items-end gap-[4px]"><span class="text-[8px] pb-[3px]">FROM</span> R600</div>
+        </div>
+        <div class="w-6/12 flex flex-row justify-start pr-[20px]">Revitalize your skin and spirit with our luxurious body treatments.</div>
+        <div class="w-2/12 flex flex-row justify-end">Make Reservation</div>
+      </div> 
+      <hr class="bg-black max-w-[1200px] mx-auto">
+      <div class="flex flex-row justify-center items-center p-8 max-w-[1200px] mx-auto">
+        <div class="w-4/12 flex flex-col justify-start">
+          <div class="service text-[20px]">Stone Spa</div>
+          <div class="price flex flex-row justify-center items-end gap-[4px]"><span class="text-[8px] pb-[3px]">FROM</span> R400</div>
+        </div>
+        <div class="w-6/12 flex flex-row justify-start pr-[20px]">Release tension with our Stone Spa, featuring heated stones for ultimate relaxation.</div>
+        <div class="w-2/12 flex flex-row justify-end">Make Reservation</div>
+      </div> 
+      <hr class="bg-black max-w-[1200px] mx-auto">
+      <div class="flex flex-row justify-center items-center p-8 max-w-[1200px] mx-auto">
+        <div class="w-4/12 flex flex-col justify-start">
+          <div class="service text-[20px]">Candle Massage</div>
+          <div class="price flex flex-row justify-center items-end gap-[4px]"><span class="text-[8px] pb-[3px]">FROM</span> R350</div>
+        </div>
+        <div class="w-6/12 flex flex-row justify-start pr-[20px]">Indulge in our Candle Massage, where warm wax soothes and relaxes.</div>
+        <div class="w-2/12 flex flex-row justify-end">Make Reservation</div>
+      </div> 
+      <hr class="bg-black max-w-[1200px] mx-auto">
+    </div>
+  </div>  
+</div>
+
+
+<script>
+  const toggleButton = document.getElementById('dropdown-toggle');
+  const dropdownContent = document.getElementById('dropdown-content');
+  const dateInput = document.getElementById('date');
+
+  // Toggle dropdown visibility
+  toggleButton.addEventListener('click', (event) => {
+    event.stopPropagation(); // Prevent closing when clicking the button
+    const isVisible = dropdownContent.style.display === 'block';
+    dropdownContent.style.display = isVisible ? 'none' : 'block';
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', () => {
+    dropdownContent.style.display = 'none';
+  });
+
+  // Update button text when a date is selected
+  dateInput.addEventListener('change', () => {
+    const selectedDate = dateInput.value;
+    if (selectedDate) {
+      toggleButton.textContent = selectedDate; // Replace "Select Date" with the chosen date
+    }
+  });
+</script>
+
+
+{% schema %}
+{
+  "name": "Bookings",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Header"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Bookings"  
+    }
+  ]
+}
+{% endschema %}
