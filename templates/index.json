@@ -303,7 +303,7 @@
         "block1_dgEWfg": {
           "type": "Block1",
           "settings": {
-            "screens": "flex",
+            "screens": "md:hidden",
             "image_1": "shopify://shop_images/unsplash_N5oElO3CvNw.png"
           }
         },
