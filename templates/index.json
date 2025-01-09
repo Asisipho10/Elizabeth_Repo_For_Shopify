@@ -175,13 +175,34 @@
           "settings": {
             "left_text": "<p>Members-Only Events</p>"
           }
+        },
+        "right_text_block_i77XqD": {
+          "type": "right_text-block",
+          "settings": {
+            "right_text": "<p>Subscribe</p>"
+          }
+        },
+        "right_text_block_QRwkh8": {
+          "type": "right_text-block",
+          "settings": {
+            "right_text": "<p>Earn Points</p>"
+          }
+        },
+        "right_text_block_gGd9aF": {
+          "type": "right_text-block",
+          "settings": {
+            "right_text": "<p>Redeem Rewards</p>"
+          }
         }
       },
       "block_order": [
         "left_text_block_hU6Kw9",
         "left_text_block_R39ggF",
         "left_text_block_fqUJKL",
-        "left_text_block_BAFRJf"
+        "left_text_block_BAFRJf",
+        "right_text_block_i77XqD",
+        "right_text_block_QRwkh8",
+        "right_text_block_gGd9aF"
       ],
       "settings": {
         "text": "Join Our Loyalty Program",
