@@ -118,16 +118,6 @@
         "image": "shopify://shop_images/Screenshot_2024-12-23_at_10.09.20.png"
       }
     },
-    "section-flex-grid": {
-      "type": "section-flex-grid",
-      "disabled": true,
-      "settings": {
-        "text": "",
-        "subtext": "",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
     "section-reviews": {
       "type": "section-reviews",
       "disabled": true,
@@ -216,6 +206,83 @@
         "text": "",
         "image": "shopify://shop_images/unsplash_fiehrnlWKTg.png"
       }
+    },
+    "section-flex-grid": {
+      "type": "section-flex-grid",
+      "blocks": {
+        "image_block_e7he7N": {
+          "type": "image-block",
+          "settings": {
+            "image": "shopify://shop_images/unsplash_pBBxMUCgwuU.png",
+            "custom_class": ""
+          }
+        },
+        "image_block_P9a734": {
+          "type": "image-block",
+          "settings": {
+            "image": "shopify://shop_images/pexels-arina-krasnikova-6663368.png",
+            "custom_class": "item-2"
+          }
+        },
+        "image_block_zi8hJq": {
+          "type": "image-block",
+          "settings": {
+            "image": "shopify://shop_images/unsplash_Mxy5gokl8mE.png",
+            "custom_class": "item-4"
+          }
+        },
+        "image_block_B9VGEM": {
+          "type": "image-block",
+          "settings": {
+            "image": "shopify://shop_images/pexels-cottonbro-3997994.png",
+            "custom_class": "item-2"
+          }
+        },
+        "image_block_KgJcDp": {
+          "type": "image-block",
+          "settings": {
+            "image": "shopify://shop_images/pexels-gabby-k-6621173.png",
+            "custom_class": ""
+          }
+        },
+        "image_block_CxDYye": {
+          "type": "image-block",
+          "settings": {
+            "image": "shopify://shop_images/pexels-gabby-k-6978043.png",
+            "custom_class": ""
+          }
+        },
+        "image_block_cbhejK": {
+          "type": "image-block",
+          "settings": {
+            "image": "shopify://shop_images/unsplash_pBBxMUCgwuU.png",
+            "custom_class": ""
+          }
+        },
+        "image_block_NhhH84": {
+          "type": "image-block",
+          "settings": {
+            "image": "shopify://shop_images/pexels-gabby-k-6621308.png",
+            "custom_class": "item-2"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_e7he7N",
+        "image_block_P9a734",
+        "image_block_zi8hJq",
+        "image_block_B9VGEM",
+        "image_block_KgJcDp",
+        "image_block_CxDYye",
+        "image_block_cbhejK",
+        "image_block_NhhH84"
+      ],
+      "settings": {
+        "text": "",
+        "subtext": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
     }
   },
   "order": [
@@ -223,10 +290,10 @@
     "section-services",
     "section_richtext_RbYzYY",
     "section-image-decoration",
-    "section-flex-grid",
     "section-reviews",
     "section-bookings",
     "section-subscribtion",
-    "section-products"
+    "section-products",
+    "section-flex-grid"
   ]
 }
