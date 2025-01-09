@@ -118,23 +118,6 @@
         "image": "shopify://shop_images/Screenshot_2024-12-23_at_10.09.20.png"
       }
     },
-    "section-subscribtion": {
-      "type": "section-subscribtion",
-      "disabled": true,
-      "settings": {
-        "text": "Join Our Loyalty Program",
-        "subtext": "<p>Become a part of our Sweet Spa family by joining our loyalty program. Enjoy exclusive discounts, priority bookings, and special offers reserved just for our members.</p>",
-        "below_text": "<p>Be the first to know about our latest treatments, exclusive offers, and wellness tips.</p>",
-        "btn_text": "Subscribe",
-        "button_url": "",
-        "btn_bg_color": "#fff",
-        "btn_text_color": "#000",
-        "right_text_1": "<p>WHY JOIN US?</p>",
-        "right_text_2": "<p>HOW IT WORKS</p>",
-        "footer_text_1": "<p>VIEW OFFERS</p>",
-        "footer_text_2": "<p>FIND & BOOK</p>"
-      }
-    },
     "section-flex-grid": {
       "type": "section-flex-grid",
       "disabled": true,
@@ -165,6 +148,54 @@
       "settings": {
         "text": ""
       }
+    },
+    "section-subscribtion": {
+      "type": "section-subscribtion",
+      "blocks": {
+        "left_text_block_hU6Kw9": {
+          "type": "left_text-block",
+          "settings": {
+            "left_text": "<p>Exclusive Discounts</p>"
+          }
+        },
+        "left_text_block_R39ggF": {
+          "type": "left_text-block",
+          "settings": {
+            "left_text": "<p>Priority Bookings</p>"
+          }
+        },
+        "left_text_block_fqUJKL": {
+          "type": "left_text-block",
+          "settings": {
+            "left_text": "<p>Birthday Perks</p>"
+          }
+        },
+        "left_text_block_BAFRJf": {
+          "type": "left_text-block",
+          "settings": {
+            "left_text": "<p>Members-Only Events</p>"
+          }
+        }
+      },
+      "block_order": [
+        "left_text_block_hU6Kw9",
+        "left_text_block_R39ggF",
+        "left_text_block_fqUJKL",
+        "left_text_block_BAFRJf"
+      ],
+      "settings": {
+        "text": "Join Our Loyalty Program",
+        "subtext": "<p>Become a part of our Sweet Spa family by joining our loyalty program. Enjoy exclusive discounts, priority bookings, and special offers reserved just for our members.</p>",
+        "below_text": "<p>Be the first to know about our latest treatments, exclusive offers, and wellness tips.</p>",
+        "btn_text": "Subscribe",
+        "button_url": "",
+        "btn_bg_color": "#fff",
+        "btn_text_color": "#000",
+        "right_text_1": "<p>WHY JOIN US?</p>",
+        "right_text_2": "<p>HOW IT WORKS</p>",
+        "footer_text_1": "<p>VIEW OFFERS</p>",
+        "footer_text_2": "<p>FIND & BOOK</p>"
+      }
     }
   },
   "order": [
@@ -172,10 +203,10 @@
     "section-services",
     "section_richtext_RbYzYY",
     "section-image-decoration",
-    "section-subscribtion",
     "section-flex-grid",
     "section-reviews",
     "section-products",
-    "section-bookings"
+    "section-bookings",
+    "section-subscribtion"
   ]
 }
