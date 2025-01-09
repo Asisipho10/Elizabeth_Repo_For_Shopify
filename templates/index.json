@@ -271,9 +271,9 @@
         "image_block_NhhH84"
       ],
       "settings": {
-        "text": "",
-        "subtext": "",
-        "padding_top": 20,
+        "text": "GALLERY",
+        "subtext": "<p>Immerse yourself in the serene beauty of Serenity Spa through our gallery. Each image captures the essence of our tranquil oasis, showcasing the luxurious environments, soothing treatments, and peaceful moments that await you.</p>",
+        "padding_top": 100,
         "padding_bottom": 100
       }
     },
