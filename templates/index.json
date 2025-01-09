@@ -32,6 +32,20 @@
     },
     "section-services": {
       "type": "section-services",
+      "blocks": {
+        "card_block_xpa9cw": {
+          "type": "card-block",
+          "settings": {
+            "image": "shopify://shop_images/unsplash_JyDMYoTCseQ.png",
+            "card_text": "Body Treatment",
+            "subtext": "<p>Indulge in our luxurious body treatments, crafted to rejuvenate and revitalize your skin, leaving you feeling refreshed and renewed.</p>",
+            "cta_btn": "EXPLORE MORE"
+          }
+        }
+      },
+      "block_order": [
+        "card_block_xpa9cw"
+      ],
       "settings": {
         "card_text": "",
         "card_subtext": ""
@@ -39,10 +53,6 @@
     },
     "section-image-decoration": {
       "type": "section-image-decoration",
-      "settings": {}
-    },
-    "section-bookings": {
-      "type": "section-bookings",
       "settings": {}
     },
     "section-subscribtion": {
@@ -85,6 +95,12 @@
       "settings": {
         "text": "",
         "image": "shopify://shop_images/WhatsApp_Image_2024-11-29_at_09.23.46.jpg"
+      }
+    },
+    "section-bookings": {
+      "type": "section-bookings",
+      "settings": {
+        "text": ""
       }
     }
   },
