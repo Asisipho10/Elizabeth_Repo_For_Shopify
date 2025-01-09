@@ -36,7 +36,7 @@
         "card_block_xpa9cw": {
           "type": "card-block",
           "settings": {
-            "image": "shopify://shop_images/unsplash_JyDMYoTCseQ.png",
+            "image": "shopify://shop_images/unsplash_quaIM4h-u5E.png",
             "card_text": "Body Treatment",
             "subtext": "<p>Indulge in our luxurious body treatments, crafted to rejuvenate and revitalize your skin, leaving you feeling refreshed and renewed.</p>",
             "cta_btn": "EXPLORE MORE"
@@ -45,9 +45,9 @@
         "card_block_n9dEJa": {
           "type": "card-block",
           "settings": {
-            "image": "shopify://shop_images/unsplash_JyDMYoTCseQ.png",
-            "card_text": "Body Treatment",
-            "subtext": "<p>Indulge in our luxurious body treatments, crafted to rejuvenate and revitalize your skin, leaving you feeling refreshed and renewed.</p>",
+            "image": "shopify://shop_images/pexels-ron-lach-9146381.png",
+            "card_text": "Foot Massage",
+            "subtext": "<p>Let the stress melt away with our rejuvenating foot massage, designed to relieve tension and restore balance to your body.</p>",
             "cta_btn": "EXPLORE MORE"
           }
         },
@@ -63,9 +63,9 @@
         "card_block_NtbYLR": {
           "type": "card-block",
           "settings": {
-            "image": "shopify://shop_images/unsplash_8IK1OrkMzMQ.png",
-            "card_text": "Candle Massage",
-            "subtext": "<p>Discover a new level of relaxation with our Candle Massage, where warm candle wax is transformed into a soothing massage oil.</p>",
+            "image": "shopify://shop_images/pexels-anntarazevich-6560273.png",
+            "card_text": "Stone Spa",
+            "subtext": "<p>Unwind with our Stone Spa treatment, where heated stones are used to release deep-seated tension and promote relaxation.</p>",
             "cta_btn": "EXPLORE MORE"
           }
         }
