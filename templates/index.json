@@ -88,11 +88,11 @@
           "type": "Button",
           "settings": {
             "button_1": "EXPLORE MORE",
-            "btn_text_color": "#fff",
+            "btn_text_color": "#ffffff",
             "button_url": "",
             "btn_bg_color": "#000",
             "button_2": "",
-            "btn_2_text_color": "#fff",
+            "btn_2_text_color": "#ffffff",
             "button_2_url": "",
             "btn_2_bg_color": "#f1f"
           }
@@ -281,7 +281,7 @@
         "text": "",
         "subtext": "",
         "padding_top": 20,
-        "padding_bottom": 20
+        "padding_bottom": 100
       }
     }
   },
