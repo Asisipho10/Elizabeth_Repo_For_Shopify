@@ -81,6 +81,37 @@
         "card_subtext": ""
       }
     },
+    "section_richtext_RbYzYY": {
+      "type": "section-richtext",
+      "blocks": {
+        "button_Yiife3": {
+          "type": "Button",
+          "settings": {
+            "button_1": "EXPLORE MORE",
+            "btn_text_color": "#fff",
+            "button_url": "",
+            "btn_bg_color": "#000",
+            "button_2": "",
+            "btn_2_text_color": "#fff",
+            "button_2_url": "",
+            "btn_2_bg_color": "#f1f"
+          }
+        }
+      },
+      "block_order": [
+        "button_Yiife3"
+      ],
+      "settings": {
+        "page_width": 800,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "header": "GIVE YOUR BODY AND MIND A BREAK",
+        "dt_text_size": 40,
+        "mb_text_size": 20,
+        "subheader": "<p>At Heavenly Touch Spa, we believe in the power of relaxation and rejuvenation. Our luxurious spa offers a tranquil escape from the hustle and bustle of everyday life, providing a sanctuary where you can unwind, revitalize, and reconnect with your inner peace.<br/><br/>Our team of experienced therapists is dedicated to delivering personalized treatments tailored to your individual needs. We use only the highest quality products, ensuring that every experience at Serenity Spa is both indulgent and beneficial for your mind, body, and soul.</p>",
+        "subheader_text_size": 20
+      }
+    },
     "section-image-decoration": {
       "type": "section-image-decoration",
       "settings": {}
@@ -137,6 +168,7 @@
   "order": [
     "section-banner_two",
     "section-services",
+    "section_richtext_RbYzYY",
     "section-image-decoration",
     "section-subscribtion",
     "section-flex-grid",
