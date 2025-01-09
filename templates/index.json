@@ -135,13 +135,6 @@
         "text": ""
       }
     },
-    "section-products": {
-      "type": "section-products",
-      "settings": {
-        "text": "",
-        "image": "shopify://shop_images/unsplash_fiehrnlWKTg.png"
-      }
-    },
     "section-bookings": {
       "type": "section-bookings",
       "settings": {
@@ -216,6 +209,13 @@
         "footer_text_1": "<p>VIEW OFFERS</p>",
         "footer_text_2": "<p>FIND & BOOK</p>"
       }
+    },
+    "section-products": {
+      "type": "section-products",
+      "settings": {
+        "text": "",
+        "image": "shopify://shop_images/unsplash_fiehrnlWKTg.png"
+      }
     }
   },
   "order": [
@@ -225,8 +225,8 @@
     "section-image-decoration",
     "section-flex-grid",
     "section-reviews",
-    "section-products",
     "section-bookings",
-    "section-subscribtion"
+    "section-subscribtion",
+    "section-products"
   ]
 }
