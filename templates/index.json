@@ -137,10 +137,9 @@
     },
     "section-products": {
       "type": "section-products",
-      "disabled": true,
       "settings": {
         "text": "",
-        "image": "shopify://shop_images/WhatsApp_Image_2024-11-29_at_09.23.46.jpg"
+        "image": "shopify://shop_images/unsplash_fiehrnlWKTg.png"
       }
     },
     "section-bookings": {
