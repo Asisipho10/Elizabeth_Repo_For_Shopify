@@ -41,6 +41,10 @@
       "type": "section-image-decoration",
       "settings": {}
     },
+    "section-bookings": {
+      "type": "section-bookings",
+      "settings": {}
+    },
     "section-subscribtion": {
       "type": "section-subscribtion",
       "disabled": true,
@@ -91,6 +95,7 @@
     "section-subscribtion",
     "section-flex-grid",
     "section-reviews",
-    "section-products"
+    "section-products",
+    "section-bookings"
   ]
 }
