@@ -12,7 +12,7 @@
 
 
 
-<div class="richtext-section flex flex-col justify-center items-center mx-10"
+<div class="richtext-section flex flex-col justify-center items-center mx-[10px] sm:mx-10"
     style="padding-top: {{ section.settings.padding_top }}px; 
            padding-bottom: {{ section.settings.padding_bottom }}px;"
   >
@@ -23,20 +23,20 @@
       <h1 class="header-content-{{ section.id }} text-center leading-[120%] md:leading-[100%] max-w-[440px] mb-10">
         {{ section.settings.header }}
       </h1>
-      <div class="subheader-content text-center md:t" style="font-size: {{ section.settings.subheader_text_size }};">
+      <div class="subheader-content text-center  text-[12px] sm:text-[14px]" style="font-size: {{ section.settings.subheader_text_size }};">
         {{ section.settings.subheader }}
       </div>
     </div>
 
       {% for block in section.blocks %}
-        <div class="text-content text-center my-2" style="font-size: {{ block.settings.text_size }}; color: {{ block.settings.text_color }};">
+        <div class="text-content text-center my-2 sm:text-[16px]" style="font-size: {{ block.settings.text_size }}; color: {{ block.settings.text_color }};">
           {{ block.settings.text }}
         </div>
 
         {% if block.settings.button_1 != blank %}
           <div class="button-container flex flex-col justify-center items-center gap-[20px] my-4">
             <div class="first-button flex flex-col justify-center items-center ">
-              <a class="text-center leading-[140%] min-w-[200px] py-4" 
+              <a class="text-center leading-[140%] min-w-[200px] py-2 sm:py-4 text-[12px] sm:text-[14px]" 
                  href="{{ block.settings.button_url }}"
                  style="background-color: {{ block.settings.btn_bg_color }}; color: {{ block.settings.btn_text_color }}">
                 {{ block.settings.button_1 }}
