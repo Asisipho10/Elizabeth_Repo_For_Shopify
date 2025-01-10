@@ -1,10 +1,10 @@
 <div class="deco-section w-full ">
-  <div class="deco-block flex flex-row justify-start items-center">
+  <div class="deco-block flex flex-row justify-{{ section.settings.justification }} items-center">
     {% if section.settings.image != blank %}
       <img 
         src="{{ section.settings.image | image_url: width: '2000' }}" 
         alt=""
-        class="w-fit h-full object-cover"
+        class="w-3/12 sm:w-2/12 h-auto object-cover"
         loading="lazy"
       >
     {% endif %}
@@ -20,7 +20,27 @@
       "type": "image_picker",
       "id": "image",
       "label": "Image"  
-    }
+    },
+    {
+         "type": "select",
+         "id": "justification",
+         "default": "justify-center justify-center",
+         "label": "Content Justify",
+         "options": [
+           {
+             "value": "justify-start justify-start",
+             "label": "left"
+           },
+           {
+             "value": "justify-center justify-center",
+             "label": "Center"
+           },
+           {
+             "value": "justify-end justify-end",
+             "label": "right"
+           }
+         ]
+       }
   ],
   "presets": [
     {

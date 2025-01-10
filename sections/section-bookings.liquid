@@ -53,24 +53,24 @@
     <div class="img-wrapper w-full h-[400px] bg-cover bg-center bg-blend-darken relative"
         style="background-image: url('https://cdn.shopify.com/s/files/1/0900/4875/8049/files/pexels-castorlystock-3872899.png?v=1734617915')">
       <div class="content-wrapper absolute top-0 left-0 w-full h-full flex flex-col justify-start items-start">
-        <div class="p-10">
+        <div class=" px-[10px] py-[30px] sm:p-10">
           <div class="header-wrapper ">
-            <h1 class="text-[40px] md:text-[60px] uppercase leading-[120%] text-white">A PLACE OF PARADISE</h1>
+            <h1 class="text-[32px] md:text-[60px] uppercase leading-[120%] text-white">A PLACE OF PARADISE</h1>
           </div>
-          <div class="text-wrapper mt-6 text-white">
+          <div class="text-wrapper mt-6 text-[12px] sm:text-[16px] text-white">
             BOOK YOUR SESSION WITH YOUR DEMANDS
           </div>
           <div class="mt-4 gap-4 md:gap-6">
-            <a class="text-[14px] max-w-[300px] bg-white bg-opacity-50 py-4 px-6 w-full uppercase" href="">
-             uppercase text-[12px]  MAKE RESERVATION
+            <a class="text-[12px] max-w-[300px] bg-white bg-opacity-50 py-4 px-6 w-full uppercase" href="">
+             MAKE RESERVATION
             </a>
           </div>
         </div>
       </div>
     </div>
     <div class="filter-block pb-8">
-      <div class="flex flex-row justify-center items-center bg-black gap-3 p-[10px] md:p-[10px] max-w-[900px] mx-auto h-full">
-        <div class="w-5/12 bg-white flex flex-row justify-between items-center p-3">
+      <div class="flex flex-col md:flex-row justify-center items-center bg-black gap-3 p-[10px] md:p-[10px] max-w-[900px] mx-auto h-full">
+        <div class="w-full md:w-5/12 bg-white flex flex-row justify-between items-center p-3">
         <div class="service">
             Services
           </div>
@@ -78,7 +78,7 @@
             {% render 'icon-dropdown' %}
           </div>
         </div>
-        <div class="w-4/12 h-full bg-white flex flex-row justify-between items-center p-3">
+        <div class="w-full md:w-4/12 h-full bg-white flex flex-row justify-between items-center p-3">
           <div class="service">
             <div class="dropdown">
           <button id="dropdown-toggle">Select Date</button>
@@ -96,7 +96,7 @@
           </div>
         </div>
         
-        <div class="w-3/12 bg-white flex flex-row justify-between items-center p-3 relative cursor-pointer" id="dropdown-container">
+        <div class="w-full md:w-3/12 bg-white flex flex-row justify-between items-center p-3 relative cursor-pointer" id="dropdown-container">
   <div class="service" id="selected-value">No. of People</div>
   <div class="bookings-dropdown">
     {% render 'icon-dropdown' %}
@@ -114,57 +114,57 @@
     </div>
 
     <div class="service-headers">
-      <div class="flex flex-row justify-center items-center p-8 max-w-[1200px] mx-auto">
-        <div class="w-4/12 flex flex-row justify-start text-[20px]">SERVICES</div>
-        <div class="w-6/12 flex flex-row justify-start text-[20px]">OFFERS</div>
-        <div class="sm:w-2/12 flex flex-row justify-end text-[20px]">AVAILABILITY</div>
+      <div class="flex flex-row justify-between sm:justify-center items-center p-8 max-w-[1200px] mx-auto">
+        <div class="w-6/12 sm:w-4/12 flex flex-row justify-start text-[16px] sm:text-[20px]">SERVICES</div><hr class="sm:hidden rotate-90 text-red-400 w-[20px]">
+        <div class="w-6/12 hidden sm:flex sm:flex-row justify-start text-[16px] sm:text-[20px]">OFFERS</div>
+        <div class="w-6/12 sm:w-2/12 flex flex-row justify-end text-[16px] sm:text-[20px]">AVAILABILITY</div>
       </div>  
     </div>
 
     <div class="services-block bg-[#f4f4f4] py-4">
-      <div class="flex flex-row justify-center items-center p-8 max-w-[1200px] mx-auto">
-        <div class="w-4/12 flex flex-col justify-start">
-          <div class="service text-[20px]">Foot Massage</div>
+      <div class="flex flex-row justify-between md:justify-center items-center p-8 max-w-[1200px] mx-auto">
+        <div class="w-8/12 sm:w-4/12 flex flex-col justify-start">
+          <div class="service text-[16px] sm:text-[20px]">Foot Massage</div>
           <div class="price flex flex-row justify-center items-end gap-[4px]"><span class="text-[8px] pb-[3px]">FROM</span> R300</div>
         </div>
-        <div class="w-6/12 flex flex-row justify-start pr-[20px]">Relieve tension and restore balance with our rejuvenating foot massage.</div>
-        <div class="w-2/12 flex flex-row justify-end uppercase text-[12px]">Make Reservation</div>
+        <div class="w-6/12 hidden sm:flex sm:flex-row justify-start pr-[20px] ">Relieve tension and restore balance with our rejuvenating foot massage.</div>
+        <div class="w-4/12 sm:w-2/12 flex flex-row justify-end uppercase text-[12px]">Make Reservation</div>
       </div> 
       <hr class="bg-black max-w-[1200px] mx-auto">
-      <div class="flex flex-row justify-center items-center p-8 max-w-[1200px] mx-auto">
-        <div class="w-4/12 flex flex-col justify-start">
-          <div class="service text-[20px]">Oil Therapy</div>
+      <div class="flex flex-row justify-between md:justify-center items-center p-8 max-w-[1200px] mx-auto">
+        <div class="w-8/12 sm:w-4/12 flex flex-col justify-start">
+          <div class="service text-[16px] sm:text-[20px]">Oil Therapy</div>
           <div class="price flex flex-row justify-center items-end gap-[4px]"><span class="text-[8px] pb-[3px]">FROM</span> R250</div>
         </div>
-        <div class="w-6/12 flex flex-row justify-start pr-[20px]">Experience the healing power of essential oils with our Oil Therapy, a holistic treatment for mind and body.</div>
-        <div class="w-2/12 flex flex-row justify-end uppercase text-[12px]">Make Reservation</div>
+        <div class="w-6/12 hidden sm:flex sm:flex-row justify-start pr-[20px] ">Experience the healing power of essential oils with our Oil Therapy, a holistic treatment for mind and body.</div>
+        <div class="w-4/12 sm:w-2/12 flex flex-row justify-end uppercase text-[12px]">Make Reservation</div>
       </div> 
       <hr class="bg-black max-w-[1200px] mx-auto">
-      <div class="flex flex-row justify-center items-center p-8 max-w-[1200px] mx-auto">
-        <div class="w-4/12 flex flex-col justify-start">
-          <div class="service text-[20px]">Body Treatment</div>
+      <div class="flex flex-row justify-between md:justify-center items-center p-8 max-w-[1200px] mx-auto">
+        <div class="w-8/12 sm:w-4/12 flex flex-col justify-start">
+          <div class="service text-[16px] sm:text-[20px]">Body Treatment</div>
           <div class="price flex flex-row justify-center items-end gap-[4px]"><span class="text-[8px] pb-[3px]">FROM</span> R600</div>
         </div>
-        <div class="w-6/12 flex flex-row justify-start pr-[20px]">Revitalize your skin and spirit with our luxurious body treatments.</div>
-        <div class="w-2/12 flex flex-row justify-end uppercase text-[12px]">Make Reservation</div>
+        <div class="w-6/12 hidden sm:flex sm:flex-row justify-start pr-[20px] ">Revitalize your skin and spirit with our luxurious body treatments.</div>
+        <div class="w-4/12 sm:w-2/12 flex flex-row justify-end uppercase text-[12px]">Make Reservation</div>
       </div> 
       <hr class="bg-black max-w-[1200px] mx-auto">
-      <div class="flex flex-row justify-center items-center p-8 max-w-[1200px] mx-auto">
-        <div class="w-4/12 flex flex-col justify-start">
-          <div class="service text-[20px]">Stone Spa</div>
+      <div class="flex flex-row justify-between md:justify-center items-center p-8 max-w-[1200px] mx-auto">
+        <div class="w-8/12 sm:w-4/12 flex flex-col justify-start">
+          <div class="service text-[16px] sm:text-[20px]">Stone Spa</div>
           <div class="price flex flex-row justify-center items-end gap-[4px]"><span class="text-[8px] pb-[3px]">FROM</span> R400</div>
         </div>
-        <div class="w-6/12 flex flex-row justify-start pr-[20px]">Release tension with our Stone Spa, featuring heated stones for ultimate relaxation.</div>
-        <div class="w-2/12 flex flex-row justify-end uppercase text-[12px]">Make Reservation</div>
+        <div class="w-6/12 hidden sm:flex sm:flex-row justify-start pr-[20px] ">Release tension with our Stone Spa, featuring heated stones for ultimate relaxation.</div>
+        <div class="w-4/12 sm:w-2/12 flex flex-row justify-end uppercase text-[12px]">Make Reservation</div>
       </div> 
       <hr class="bg-black max-w-[1200px] mx-auto">
-      <div class="flex flex-row justify-center items-center p-8 max-w-[1200px] mx-auto">
-        <div class="w-4/12 flex flex-col justify-start">
-          <div class="service text-[20px]">Candle Massage</div>
+      <div class="flex flex-row justify-between md:justify-center items-center p-8 max-w-[1200px] mx-auto">
+        <div class="w-8/12 sm:w-4/12 flex flex-col justify-start">
+          <div class="service text-[16px] sm:text-[20px]">Candle Massage</div>
           <div class="price flex flex-row justify-center items-end gap-[4px]"><span class="text-[8px] pb-[3px]">FROM</span> R350</div>
         </div>
-        <div class="w-6/12 flex flex-row justify-start pr-[20px]">Indulge in our Candle Massage, where warm wax soothes and relaxes.</div>
-        <div class="w-2/12 flex flex-row justify-end uppercase text-[12px]">Make Reservation</div>
+        <div class="w-6/12 hidden sm:flex sm:flex-row justify-start pr-[20px] ">Indulge in our Candle Massage, where warm wax soothes and relaxes.</div>
+        <div class="w-4/12 sm:w-2/12 flex flex-row justify-end uppercase text-[12px]">Make Reservation</div>
       </div> 
       <hr class="bg-black max-w-[1200px] mx-auto">
     </div>

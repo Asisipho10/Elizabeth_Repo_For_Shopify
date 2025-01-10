@@ -124,6 +124,11 @@
         "text": ""
       }
     },
+    "section-blogs": {
+      "type": "section-blogs",
+      "settings": {
+      }
+    },
     "section-subscribtion": {
       "type": "section-subscribtion",
       "blocks": {
@@ -358,6 +363,7 @@
     "section-products",
     "section-flex-grid",
     "section-reviews",
+    "section-blogs",
     "section_socials_gallery_XxLbPR"
   ]
 }
