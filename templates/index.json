@@ -115,18 +115,14 @@
     "section-image-decoration": {
       "type": "section-image-decoration",
       "settings": {
-        "image": "shopify://shop_images/Screenshot_2024-12-23_at_10.09.20.png"
+        "image": "shopify://shop_images/Screenshot_2024-12-23_at_10.09.20.png",
+        "justification": "justify-start justify-start"
       }
     },
     "section-bookings": {
       "type": "section-bookings",
       "settings": {
         "text": ""
-      }
-    },
-    "section-blogs": {
-      "type": "section-blogs",
-      "settings": {
       }
     },
     "section-subscribtion": {
@@ -288,6 +284,10 @@
         "text": ""
       }
     },
+    "section-blogs": {
+      "type": "section-blogs",
+      "settings": {}
+    },
     "section_socials_gallery_XxLbPR": {
       "type": "section-socials-gallery",
       "blocks": {
@@ -344,7 +344,7 @@
       ],
       "settings": {
         "headline": "",
-        "text_color": "#000",
+        "text_color": "#000000",
         "alignment": "center",
         "subheadline": "",
         "sub-alignment": "center",
