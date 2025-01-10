@@ -194,16 +194,23 @@
         "footer_text_2": "<p>FIND & BOOK</p>"
       }
     },
-    "section-blogs": {
-      "type": "section-blogs",
-      "settings": {}
-    },
     "section-products": {
       "type": "section-products",
       "settings": {
         "text": "",
         "image": "shopify://shop_images/unsplash_fiehrnlWKTg.png"
       }
+    },
+    "section_image_decoration_Q4VRwH": {
+      "type": "section-image-decoration",
+      "settings": {
+        "image": "shopify://shop_images/unsplash_XXpbdU_31Sg.png",
+        "justification": "justify-end justify-end"
+      }
+    },
+    "section-blogs": {
+      "type": "section-blogs",
+      "settings": {}
     },
     "section-flex-grid": {
       "type": "section-flex-grid",
@@ -361,6 +368,7 @@
     "section-bookings",
     "section-subscribtion",
     "section-products",
+    "section_image_decoration_Q4VRwH",
     "section-blogs",
     "section-flex-grid",
     "section-reviews",
