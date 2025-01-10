@@ -1323,6 +1323,14 @@ video {
   width: 0.5rem;
 }
 
+.w-4 {
+  width: 1rem;
+}
+
+.w-\[1300px\] {
+  width: 1300px;
+}
+
 .min-w-\[200px\] {
   min-width: 200px;
 }
@@ -1818,6 +1826,14 @@ video {
 
 .grid-flow-col-dense {
   grid-auto-flow: column dense;
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-rows-2 {
+  grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 
 .flex-row {
