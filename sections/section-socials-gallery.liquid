@@ -12,15 +12,15 @@
         </div>
       {% endif %}
   </div> 
-    
+
   <div class="flex flex-row justify-center">
     <div class="w-4/12 md:w-5/12 flex flex-row justify-center overflow-x-scroll">
       {% for block in section.blocks %}
         <div class="
-        {% if block.settings.screens == 'md:hidden' %} hidden md:flex
-        {% elsif block.settings.screens == 'hidden' %} flex md:hidden
-        {% else %} flex 
-        {% endif %}">
+          {% if block.settings.screens == 'md:hidden' %} hidden md:flex
+          {% elsif block.settings.screens == 'hidden' %} flex md:hidden
+          {% else %} flex 
+          {% endif %}">
             <div class="w-full max-h-[200px] md:max-h-[300px] relative overflow-hidden">
             {% if block.settings.image_1 != blank %}
                 <img 
